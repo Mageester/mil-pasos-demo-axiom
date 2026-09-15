@@ -1533,6 +1533,390 @@
       line-height: 1.5;
     }
 
+    /* FLOATING AXIOM DEMO WATERMARK */
+    .axiom-watermark {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 92;
+      transition: transform 0.3s var(--ease-cinema), opacity 0.3s ease;
+    }
+    .axiom-watermark-link {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: rgba(14, 12, 15, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 0.45rem 0.9rem 0.45rem 0.65rem;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(232, 168, 87, 0.18);
+      transition: all 0.25s ease;
+    }
+    .axiom-watermark-link:hover {
+      background: rgba(22, 19, 24, 0.98);
+      border-color: var(--amber);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.65), 0 0 20px rgba(232, 168, 87, 0.35);
+    }
+    .axiom-badge-pill {
+      background: linear-gradient(135deg, var(--coral), var(--sunset));
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      padding: 0.22rem 0.55rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .axiom-by-text {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.75);
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+    .axiom-watermark-logo {
+      height: 20px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+      display: block;
+    }
+
+    /* FOOTER AXIOM ATTRIBUTION */
+    .footer-axiom-credit {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.55rem 1.15rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      margin-top: 0.5rem;
+    }
+    .footer-axiom-credit:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--amber);
+      transform: translateY(-1px);
+    }
+    .footer-axiom-text {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.78);
+      font-weight: 500;
+    }
+    .footer-axiom-logo {
+      height: 18px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* DEDICATED FULL-FEATURED MOBILE NAV DRAWER */
+    .mobile-nav-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 11, 12, 0.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 10000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+    .mobile-nav-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .mobile-nav-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 88%;
+      max-width: 375px;
+      height: 100%;
+      background: #121013;
+      border-left: 1px solid var(--border-dark);
+      z-index: 10001;
+      padding: 1.5rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.38s var(--ease-cinema);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .mobile-nav-drawer.active {
+      transform: translateX(0);
+    }
+    .mobile-nav-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-dark);
+      margin-bottom: 1.25rem;
+    }
+    .mobile-nav-close {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border-dark);
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .mobile-nav-close:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+    .mobile-nav-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .mobile-nav-link-item a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0.9rem;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+    .mobile-nav-link-item a:hover, .mobile-nav-link-item a:active {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--amber);
+      transform: translateX(4px);
+    }
+    .mobile-nav-badge {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--coral);
+      letter-spacing: 0.08em;
+    }
+    .mobile-nav-ctas {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border-dark);
+    }
+    .mobile-nav-footer-credit {
+      margin-top: 1rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    /* WEEKLY TIMETABLE & STUDIO PASSES STYLING */
+    .schedule-block-container {
+      margin-top: 4.5rem;
+      padding-top: 3.5rem;
+      border-top: 1px solid rgba(20, 18, 20, 0.12);
+    }
+    .schedule-intro-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 2.25rem;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .schedule-intro-row h3 {
+      font-size: clamp(2rem, 3.8vw, 3.2rem);
+      color: var(--text-dark);
+    }
+    .schedule-days-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+    .schedule-day-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: 14px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .schedule-day-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    }
+    .schedule-day-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 2px solid rgba(20, 18, 20, 0.08);
+    }
+    .schedule-day-title {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: var(--text-dark);
+      margin: 0;
+    }
+    .schedule-location-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(255, 73, 44, 0.1);
+      color: var(--coral);
+      letter-spacing: 0.05em;
+    }
+    .schedule-item {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px dashed rgba(20, 18, 20, 0.1);
+    }
+    .schedule-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .schedule-time-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--coral);
+      margin-bottom: 0.35rem;
+    }
+    .schedule-class-name {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text-dark);
+      margin-bottom: 0.25rem;
+    }
+    .schedule-class-details {
+      font-size: 0.8125rem;
+      color: var(--text-dark-muted);
+      line-height: 1.45;
+    }
+
+    /* PASSES & PACKAGES GRID */
+    .passes-showcase {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: 18px;
+      padding: 2.5rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+    }
+    .passes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .pass-card {
+      background: #FAF7F2;
+      border: 1px solid rgba(20, 18, 20, 0.1);
+      border-radius: 14px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.25s ease;
+    }
+    .pass-card:hover {
+      background: #FFFFFF;
+      border-color: var(--coral);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(20, 18, 20, 0.08);
+    }
+    .pass-card.featured {
+      background: #FFFFFF;
+      border: 2px solid var(--coral);
+      box-shadow: 0 12px 32px rgba(255, 73, 44, 0.12);
+    }
+    .pass-ribbon {
+      position: absolute;
+      top: -12px;
+      left: 1.5rem;
+      background: var(--coral);
+      color: #fff;
+      font-size: 0.6875rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      box-shadow: 0 4px 10px rgba(255, 73, 44, 0.3);
+    }
+    .pass-card-title {
+      font-size: 1.3rem;
+      color: var(--text-dark);
+      margin-bottom: 0.4rem;
+    }
+    .pass-card-price {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      color: var(--text-dark);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.25rem;
+    }
+    .pass-card-price small {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-dark-muted);
+    }
+    .pass-card-desc {
+      font-size: 0.875rem;
+      color: var(--text-dark-muted);
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+    .pass-card-cta {
+      background: rgba(20, 18, 20, 0.08);
+      color: var(--text-dark);
+      border: 1px solid rgba(20, 18, 20, 0.15);
+      padding: 0.65rem 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+      width: 100%;
+    }
+    .pass-card:hover .pass-card-cta, .pass-card.featured .pass-card-cta {
+      background: var(--coral);
+      border-color: var(--coral);
+      color: #fff;
+    }
+
     /* RESPONSIVE STYLING */
     @media (max-width: 1024px) {
       .hero-content {
@@ -1561,23 +1945,61 @@
 
     @media (max-width: 768px) {
       header.site-header {
-        padding: 1rem 1.25rem;
+        padding: 0.75rem 1rem;
+      }
+      .header-container {
+        gap: 0.75rem;
       }
       .nav-links {
         display: none;
       }
       .mobile-menu-btn {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        color: #fff;
+        cursor: pointer;
+        padding: 0;
+        transition: background-color 0.2s;
+      }
+      .mobile-menu-btn:hover {
+        background: rgba(255, 255, 255, 0.16);
+      }
+      .clave-toggle-btn {
+        padding: 0.45rem 0.65rem;
+        gap: 0.35rem;
+      }
+      .clave-toggle-btn span {
+        display: none;
+      }
+      .btn-header-cta {
+        padding: 0.45rem 0.85rem;
+        font-size: 0.75rem;
       }
       section.hero-section {
-        padding: 6.5rem 1.25rem 3.5rem;
-        min-height: 90vh;
+        padding: 6rem 1.25rem 3rem;
+        min-height: 88vh;
       }
       .hero-title {
-        font-size: 3.2rem;
+        font-size: clamp(2.7rem, 11vw, 3.8rem);
+        line-height: 0.95;
       }
       .hero-right-box {
-        padding: 1.5rem;
+        padding: 1.35rem;
+      }
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+      }
+      .hero-actions .btn-primary, .hero-actions .btn-secondary {
+        width: 100%;
+        justify-content: center;
       }
       .party-mosaic {
         grid-template-columns: 1fr;
@@ -1587,14 +2009,84 @@
       }
       .gallery-masonry {
         grid-template-columns: 1fr;
-        grid-auto-rows: 260px;
+        grid-auto-rows: 240px;
       }
       .gallery-item.wide, .gallery-item.tall {
         grid-column: span 1;
         grid-row: span 1;
       }
+      .schedule-intro-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .passes-showcase {
+        padding: 1.5rem 1.25rem;
+      }
       .footer-grid {
         grid-template-columns: 1fr;
+        gap: 2.25rem;
+      }
+      .axiom-watermark {
+        bottom: 1rem;
+        right: 1rem;
+      }
+      .axiom-watermark-link {
+        padding: 0.35rem 0.65rem 0.35rem 0.55rem;
+        gap: 0.45rem;
+      }
+      .axiom-watermark-logo {
+        height: 16px;
+      }
+      .axiom-badge-pill {
+        font-size: 0.56rem;
+        padding: 0.15rem 0.4rem;
+      }
+      .axiom-by-text {
+        font-size: 0.65rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .brand-logo .logo-title {
+        font-size: 1.1rem;
+      }
+      .brand-logo .logo-sub {
+        font-size: 0.55rem;
+      }
+      .brand-logo img {
+        width: 32px !important;
+        height: 32px !important;
+      }
+      .classes-grid {
+        grid-template-columns: 1fr;
+      }
+      .filter-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 0.5rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .filter-tabs::-webkit-scrollbar {
+        display: none;
+      }
+      .filter-btn {
+        flex-shrink: 0;
+      }
+      .booking-drawer {
+        width: 100%;
+        max-width: 100%;
+        padding: 1.75rem 1.25rem;
+      }
+      .modal-frame {
+        width: 96%;
+      }
+      .bio-tabs {
+        width: 100%;
+      }
+      .bio-toggle-btn {
+        flex: 1;
+        text-align: center;
       }
     }
 
@@ -1797,11 +2289,11 @@
             <div class="class-meta-list">
               <div class="class-meta-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                Tuesday · 8:00 PM
+                Tuesday · 7:00 PM – 8:30 PM
               </div>
               <div class="class-meta-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                802 Dundas St West, Toronto
+                509 Bloor St West, Toronto
               </div>
             </div>
             <p class="class-desc">
@@ -1816,38 +2308,7 @@
           </div>
         </article>
 
-        <!-- Card 2: Zumba Fitness -->
-        <article class="class-card" data-category="fitness">
-          <div class="class-media">
-            <img src="https://static.wixstatic.com/media/7e68de_fa91e644f3084d24be6c6ca2a1eaa6bc~mv2.jpg" alt="Zumba Fitness Class at Mil Pasos" loading="lazy">
-            <span class="class-tag-overlay">Cardio & Rhythm</span>
-            <span class="class-price-pill">$20</span>
-          </div>
-          <div class="class-body">
-            <h3 class="class-title">Zumba Fitness</h3>
-            <div class="class-meta-list">
-              <div class="class-meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                Tuesday · 7:00 PM
-              </div>
-              <div class="class-meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                802 Dundas St West, Toronto
-              </div>
-            </div>
-            <p class="class-desc">
-              High-voltage cardio set to infectious Latin, Afro-beat, and reggaeton rhythms. Sweat, smile, and torch energy with Julie Marouze's signature infectious vitality.
-            </p>
-            <div class="class-card-actions">
-              <button class="btn-book-class" onclick="openBookingDrawer('Zumba Fitness ($20)')">Book Class →</button>
-              <button class="btn-class-details" onclick="openBookingDrawer('Zumba Fitness ($20)')" title="More info" aria-label="Class details">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-              </button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 3: Only WomXn Salsa -->
+        <!-- Card 2: Only WomXn Salsa -->
         <article class="class-card" data-category="dance">
           <div class="class-media">
             <img src="https://static.wixstatic.com/media/7e68de_fe9bdb2b09294436bafcce76bb7ed15b~mv2.jpg" alt="Only WomXn Salsa Styling with Julie" loading="lazy">
@@ -1859,7 +2320,7 @@
             <div class="class-meta-list">
               <div class="class-meta-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                Wednesday · 8:00 PM
+                Wednesday · 8:00 PM – 9:00 PM
               </div>
               <div class="class-meta-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -1878,7 +2339,69 @@
           </div>
         </article>
 
-        <!-- Card 4: Private Lessons -->
+        <!-- Card 3: Zumba Fitness -->
+        <article class="class-card" data-category="fitness">
+          <div class="class-media">
+            <img src="https://static.wixstatic.com/media/7e68de_fa91e644f3084d24be6c6ca2a1eaa6bc~mv2.jpg" alt="Zumba Fitness Class at Mil Pasos" loading="lazy">
+            <span class="class-tag-overlay">Cardio & Rhythm</span>
+            <span class="class-price-pill">$20</span>
+          </div>
+          <div class="class-body">
+            <h3 class="class-title">Zumba Fitness</h3>
+            <div class="class-meta-list">
+              <div class="class-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Saturday · 10:30 AM – 11:30 AM
+              </div>
+              <div class="class-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                509 Bloor St West, Toronto
+              </div>
+            </div>
+            <p class="class-desc">
+              High-voltage cardio set to infectious Latin, Afro-beat, and reggaeton rhythms. Sweat, smile, and torch energy with Julie Marouze's signature infectious vitality.
+            </p>
+            <div class="class-card-actions">
+              <button class="btn-book-class" onclick="openBookingDrawer('Zumba Fitness ($20)')">Book Class →</button>
+              <button class="btn-class-details" onclick="openBookingDrawer('Zumba Fitness ($20)')" title="More info" aria-label="Class details">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: Kids Afro / Hip Hop -->
+        <article class="class-card" data-category="dance">
+          <div class="class-media">
+            <img src="https://static.wixstatic.com/media/7e68de_81293f0ac3e348649c6db433e3432612~mv2.jpg" alt="Kids Afro and Hip Hop Dance with Mil Pasos" loading="lazy">
+            <span class="class-tag-overlay">Youth Program</span>
+            <span class="class-price-pill">$20</span>
+          </div>
+          <div class="class-body">
+            <h3 class="class-title">Kids Afro / Hip Hop</h3>
+            <div class="class-meta-list">
+              <div class="class-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Tuesday · 6:00 PM – 7:00 PM
+              </div>
+              <div class="class-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                509 Bloor St West, Toronto
+              </div>
+            </div>
+            <p class="class-desc">
+              A playful, energetic foundation in rhythm, coordination, and creative movement for children and youth. Building confidence, discipline, and musical joy.
+            </p>
+            <div class="class-card-actions">
+              <button class="btn-book-class" onclick="openBookingDrawer('Kids Afro / Hip Hop ($20)')">Enroll Youth →</button>
+              <button class="btn-class-details" onclick="openBookingDrawer('Kids Afro / Hip Hop ($20)')" title="More info" aria-label="Class details">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5: Private Coaching -->
         <article class="class-card" data-category="private">
           <div class="class-media">
             <img src="https://static.wixstatic.com/media/7e68de_63ec28de8b9c4549bf40336315fbc190~mv2.jpg" alt="Private Dance Coaching by Mil Pasos" loading="lazy">
@@ -1894,11 +2417,11 @@
               </div>
               <div class="class-meta-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Toronto Studio or In-Home
+                295 Dufferin St or In-Home
               </div>
             </div>
             <p class="class-desc">
-              Rapid progression tailored to your pace. Ideal for beginners seeking solid foundation, dancers refining lead/follow connection, or fast-track mastery.
+              Rapid progression tailored to your pace. Ideal for beginners seeking solid foundation, dancers refining lead/follow connection, or couples preparing for events.
             </p>
             <div class="class-card-actions">
               <button class="btn-book-class" onclick="openBookingDrawer('Private Lessons ($80/hr)')">Inquire Coaching →</button>
@@ -1909,7 +2432,7 @@
           </div>
         </article>
 
-        <!-- Card 5: Shows & Performances -->
+        <!-- Card 6: Shows & Performances -->
         <article class="class-card" data-category="private">
           <div class="class-media">
             <img src="https://static.wixstatic.com/media/7e68de_ac0b1506ae8d4d008f74ab2a472e3350~mv2.jpg" alt="Live Latin Dance Shows & Animations" loading="lazy">
@@ -1940,6 +2463,205 @@
           </div>
         </article>
 
+      </div>
+
+      <!-- INTERACTIVE WEEKLY TIMETABLE & PASSES -->
+      <div class="schedule-block-container" id="schedule">
+        <div class="schedule-intro-row">
+          <div>
+            <span class="editorial-eyebrow eyebrow-dark">Live Weekly Timetable</span>
+            <h3>WEEK AT A GLANCE</h3>
+          </div>
+          <p style="color: var(--text-dark-muted); max-width: 480px; font-size: 0.95rem; margin: 0;">
+            Classes run weekly across our downtown Toronto locations. Drop-ins welcome every week — no pre-existing partner needed.
+          </p>
+        </div>
+
+        <div class="schedule-days-grid">
+          <!-- Tuesday -->
+          <div class="schedule-day-card">
+            <div class="schedule-day-header">
+              <h4 class="schedule-day-title">TUESDAY</h4>
+              <span class="schedule-location-badge">509 Bloor St W</span>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time-row">
+                <span>6:00 PM – 7:00 PM</span>
+                <span>$20</span>
+              </div>
+              <div class="schedule-class-name">Kids Afro / Hip Hop</div>
+              <div class="schedule-class-details">Ages 6–14 · Rhythm, groove & coordination</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time-row">
+                <span>7:00 PM – 8:30 PM</span>
+                <span>$20 / Pass</span>
+              </div>
+              <div class="schedule-class-name">Cuban Salsa & Timba</div>
+              <div class="schedule-class-details">Casino fundamentals, partner connection, and Cuban musicality with Rafa & Julie.</div>
+            </div>
+          </div>
+
+          <!-- Wednesday -->
+          <div class="schedule-day-card">
+            <div class="schedule-day-header">
+              <h4 class="schedule-day-title">WEDNESDAY</h4>
+              <span class="schedule-location-badge">295 Dufferin St</span>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time-row">
+                <span>8:00 PM – 9:00 PM</span>
+                <span>$20 / Pass</span>
+              </div>
+              <div class="schedule-class-name">Only WomXn Cuban Salsa</div>
+              <div class="schedule-class-details">Lady styling, posture, body isolation, and fluid arm movements with Julie.</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time-row">
+                <span>9:00 PM – 9:30 PM</span>
+                <span>Community</span>
+              </div>
+              <div class="schedule-class-name">Social Practice & Cooldown</div>
+              <div class="schedule-class-details">Informal social dancing and community connection on sprung wood.</div>
+            </div>
+          </div>
+
+          <!-- Saturday -->
+          <div class="schedule-day-card">
+            <div class="schedule-day-header">
+              <h4 class="schedule-day-title">SATURDAY</h4>
+              <span class="schedule-location-badge">509 Bloor St W</span>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time-row">
+                <span>10:30 AM – 11:30 AM</span>
+                <span>$20 / Pass</span>
+              </div>
+              <div class="schedule-class-name">Zumba Dance Fitness</div>
+              <div class="schedule-class-details">Cardio blast fueled by high-energy Latin, reggaeton, and salsa rhythms with Julie.</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time-row">
+                <span>Afternoon</span>
+                <span>Private Slots</span>
+              </div>
+              <div class="schedule-class-name">Private Coaching & Weddings</div>
+              <div class="schedule-class-details">Dedicated 1-on-1 technique & couples first dance choreography by appointment.</div>
+            </div>
+          </div>
+
+          <!-- Mon–Sat & Sundays -->
+          <div class="schedule-day-card">
+            <div class="schedule-day-header">
+              <h4 class="schedule-day-title">BESPOKE & REGIONAL</h4>
+              <span class="schedule-location-badge">Toronto & KW</span>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time-row">
+                <span>Mon–Sat Flexible</span>
+                <span>$80/hr</span>
+              </div>
+              <div class="schedule-class-name">1-on-1 Private Lessons</div>
+              <div class="schedule-class-details">Custom tailored progression in Casino, styling, musicality, or competition prep.</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time-row">
+                <span>Sundays</span>
+                <span>Popups</span>
+              </div>
+              <div class="schedule-class-name">Kitchener-Waterloo Workshops</div>
+              <div class="schedule-class-details">Regional intensive bootcamps, masterclasses, and private lessons in KW region.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STUDIO PASSES & PACKAGES -->
+        <div class="passes-showcase" id="passes">
+          <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <span class="editorial-eyebrow eyebrow-dark">Plans & Memberships</span>
+              <h3 style="margin: 0; color: var(--text-dark); font-size: clamp(1.8rem, 3.2vw, 2.5rem);">CLASS PASSES</h3>
+            </div>
+            <div style="font-size: 0.875rem; color: var(--text-dark-muted);">
+              Pay in person via Cash or Interac e-transfer to <strong>milpasosstudio@gmail.com</strong>
+            </div>
+          </div>
+
+          <div class="passes-grid">
+            <!-- Discovery Pass (Featured) -->
+            <div class="pass-card featured">
+              <span class="pass-ribbon">BEST VALUE FOR NEW DANCERS</span>
+              <h4 class="pass-card-title">Discovery Pass</h4>
+              <div class="pass-card-price">
+                $52 <small>/ 4 classes ($13/class)</small>
+              </div>
+              <p class="pass-card-desc">
+                Buy 3 group classes, get 1 FREE! A 1-time introductory package designed for new students to experience Cuban Salsa, WomXn Salsa, and Zumba.
+              </p>
+              <button class="pass-card-cta" onclick="openBookingDrawer('Discovery Pass ($52)')">Claim Discovery Pass →</button>
+            </div>
+
+            <!-- Single Drop-In -->
+            <div class="pass-card">
+              <h4 class="pass-card-title">Single Drop-In</h4>
+              <div class="pass-card-price">
+                $20 <small>/ single class</small>
+              </div>
+              <p class="pass-card-desc">
+                Total flexibility. Walk in any week for Cuban Salsa, Only WomXn, Zumba, or Kids Afro. No long-term commitment needed.
+              </p>
+              <button class="pass-card-cta" onclick="openBookingDrawer('Single Drop-In ($20)')">Book Single Drop-in</button>
+            </div>
+
+            <!-- 5 Class Pass -->
+            <div class="pass-card">
+              <h4 class="pass-card-title">5 Class Pass</h4>
+              <div class="pass-card-price">
+                $85 <small>/ 5 classes ($17/class)</small>
+              </div>
+              <p class="pass-card-desc">
+                Valid across all weekly group dance and fitness classes. Punch card flexibility with a $15 total savings.
+              </p>
+              <button class="pass-card-cta" onclick="openBookingDrawer('5 Class Pass ($85)')">Get 5-Class Pass</button>
+            </div>
+
+            <!-- 10 Class Pass -->
+            <div class="pass-card">
+              <h4 class="pass-card-title">10 Class Pass</h4>
+              <div class="pass-card-price">
+                $150 <small>/ 10 classes ($15/class)</small>
+              </div>
+              <p class="pass-card-desc">
+                Our most popular bundle! Save $50 on 10 classes. Flexible attendance across Tuesday Salsa, Wednesday WomXn, and Saturday Zumba.
+              </p>
+              <button class="pass-card-cta" onclick="openBookingDrawer('10 Class Pass ($150)')">Get 10-Class Pass</button>
+            </div>
+
+            <!-- Adult Unlimited Monthly -->
+            <div class="pass-card">
+              <h4 class="pass-card-title">Adult Unlimited</h4>
+              <div class="pass-card-price">
+                $130 <small>/ month</small>
+              </div>
+              <p class="pass-card-desc">
+                Unlimited monthly access to all weekly group dance and fitness classes. The best choice for rapid immersion and frequent dancers.
+              </p>
+              <button class="pass-card-cta" onclick="openBookingDrawer('Adult Unlimited Monthly ($130)')">Get Monthly Pass</button>
+            </div>
+
+            <!-- 6 Private Sessions Package -->
+            <div class="pass-card">
+              <h4 class="pass-card-title">6 Private Sessions</h4>
+              <div class="pass-card-price">
+                $390 <small>/ 6 hours ($65/hr)</small>
+              </div>
+              <p class="pass-card-desc">
+                Save $90 with our 6-hour private coaching bundle. Fast-track your technique, leading/following confidence, and personal style.
+              </p>
+              <button class="pass-card-cta" onclick="openBookingDrawer('6 Private Sessions ($390)')">Book Private Bundle</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -2251,14 +2973,14 @@
         <!-- Location 1 -->
         <div class="location-card">
           <div>
-            <span class="loc-tag">TUESDAY SESSIONS</span>
-            <h3>802 Dundas St West</h3>
+            <span class="loc-tag">TUESDAY & SATURDAY SESSIONS</span>
+            <h3>509 Bloor St West</h3>
             <p>
-              Downtown West, Toronto.<br>
-              Home to Tuesday Zumba (7 PM) and Cuban Salsa & Timba (8 PM). Close to Trinity Bellwoods.
+              The Annex / Downtown, Toronto.<br>
+              Home to Tuesday Cuban Salsa & Timba (7:00 PM), Kids Afro/Hip Hop (6:00 PM), and Saturday Zumba (10:30 AM). Steps from Bathurst Station.
             </p>
           </div>
-          <a href="https://maps.google.com/?q=802+Dundas+St+West+Toronto" target="_blank" rel="noopener noreferrer" class="loc-link">
+          <a href="https://maps.google.com/?q=509+Bloor+St+West+Toronto" target="_blank" rel="noopener noreferrer" class="loc-link">
             Get Directions
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
           </a>
@@ -2271,7 +2993,7 @@
             <h3>295 Dufferin St</h3>
             <p>
               Parkdale / Liberty Village, Toronto.<br>
-              Host to our Wednesday Only WomXn Salsa Class (8 PM). Spacious sprung wooden floors.
+              Host to Wednesday Only WomXn Salsa Lady Styling (8:00 PM) and private dance technique on spacious sprung hardwood floors.
             </p>
           </div>
           <a href="https://maps.google.com/?q=295+Dufferin+St+Toronto" target="_blank" rel="noopener noreferrer" class="loc-link">
@@ -2283,25 +3005,26 @@
         <!-- Location 3 -->
         <div class="location-card">
           <div>
-            <span class="loc-tag">REGIONAL & PRIVATE</span>
-            <h3>Kitchener-Waterloo Region</h3>
+            <span class="loc-tag">COMMUNITY & SOCIALS</span>
+            <h3>Redwood Theatre & Trinity Bellwoods</h3>
             <p>
-              Select Sunday coaching availability, intensive workshops, and special community dance sessions in KW.
+              Toronto Community Gatherings.<br>
+              Seasonal open-air community dancing at Trinity Bellwoods Park and energetic Havana social dance nights at Redwood Theatre (1300 Gerrard St E).
             </p>
           </div>
-          <a href="mailto:milpasosstudio@gmail.com?subject=KW%20Sunday%20Classes" class="loc-link">
-            Inquire KW Schedule
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <a href="https://maps.google.com/?q=1300+Gerrard+St+E+Toronto" target="_blank" rel="noopener noreferrer" class="loc-link">
+            View Social Venue
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
           </a>
         </div>
 
         <!-- Location 4 -->
         <div class="location-card">
           <div>
-            <span class="loc-tag">TOURING & EVENTS</span>
-            <h3>GTA · Ontario · Quebec</h3>
+            <span class="loc-tag">REGIONAL & TOURING</span>
+            <h3>Kitchener-Waterloo & GTA</h3>
             <p>
-              Available for festivals, congresses, private functions, and stage performances across eastern Canada.
+              Select Sunday masterclasses and private coaching in the KW region, plus corporate animations and festival stage performances across Ontario and Quebec.
             </p>
           </div>
           <a href="tel:+16472864209" class="loc-link">
@@ -2331,7 +3054,7 @@
       </p>
 
       <div class="cta-actions">
-        <button class="btn-primary" onclick="openBookingDrawer('Tuesday Class ($20)')">
+        <button class="btn-primary" onclick="openBookingDrawer('Cuban Salsa & Timba ($20)')">
           FIND YOUR CLASS
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
@@ -2373,19 +3096,22 @@
         <h5>Programs</h5>
         <ul>
           <li><a href="#classes">Cuban Salsa & Timba ($20)</a></li>
-          <li><a href="#classes">Zumba Fitness ($20)</a></li>
           <li><a href="#classes">Only WomXn Salsa ($20)</a></li>
+          <li><a href="#classes">Zumba Fitness ($20)</a></li>
+          <li><a href="#classes">Kids Afro / Hip Hop ($20)</a></li>
+          <li><a href="#passes">Discovery Pass ($52)</a></li>
           <li><a href="#bespoke">Private Lessons ($80/hr)</a></li>
           <li><a href="#bespoke">Wedding Dances</a></li>
-          <li><a href="#bespoke">Shows & Performances</a></li>
+          <li><a href="#bespoke">Shows & Entertainment</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h5>Studios</h5>
         <ul>
-          <li><a href="#locations">802 Dundas St West, Toronto</a></li>
-          <li><a href="#locations">295 Dufferin St, Toronto</a></li>
+          <li><a href="#locations">509 Bloor St West (Annex / Downtown)</a></li>
+          <li><a href="#locations">295 Dufferin St (Parkdale / Liberty)</a></li>
+          <li><a href="#locations">Trinity Bellwoods & Redwood Theatre</a></li>
           <li><a href="#locations">Kitchener-Waterloo (Sundays)</a></li>
           <li><a href="#locations">GTA / Ontario / Quebec</a></li>
         </ul>
@@ -2405,7 +3131,13 @@
 
     <div class="footer-bottom">
       <div>&copy; 2026 Mil Pasos Studio Toronto. All rights reserved.</div>
-      <div>Designed with rhythm, cinematography & respect for the dance floor.</div>
+      <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+        <span>Cinematic Concept & Experience</span>
+        <a href="https://getaxiom.ca/" target="_blank" rel="noopener noreferrer" class="footer-axiom-credit" title="Designed by Axiom Web">
+          <span class="footer-axiom-text">Designed by</span>
+          <img src="/axiomtransparentlogo.webp" alt="Axiom Web" class="footer-axiom-logo">
+        </a>
+      </div>
     </div>
   </footer>
 
@@ -2440,15 +3172,15 @@
         <span>Cuban Salsa & Timba</span>
         <span class="opt-price">$20</span>
       </div>
-      <div class="booking-opt-meta">Tuesday · 8:00 PM · 802 Dundas St W</div>
+      <div class="booking-opt-meta">Tuesday · 7:00 PM – 8:30 PM · 509 Bloor St W</div>
     </div>
 
-    <div class="booking-option-card" onclick="selectDrawerOption(this, 'Zumba Fitness ($20)')">
+    <div class="booking-option-card" onclick="selectDrawerOption(this, 'Discovery Pass ($52 - 3 + 1 Free)')">
       <div class="booking-opt-title">
-        <span>Zumba Fitness</span>
-        <span class="opt-price">$20</span>
+        <span>Discovery Pass (4 Classes)</span>
+        <span class="opt-price">$52</span>
       </div>
-      <div class="booking-opt-meta">Tuesday · 7:00 PM · 802 Dundas St W</div>
+      <div class="booking-opt-meta">Best Value Intro · $13/class · All Group Classes</div>
     </div>
 
     <div class="booking-option-card" onclick="selectDrawerOption(this, 'Only WomXn Salsa ($20)')">
@@ -2456,7 +3188,23 @@
         <span>Only WomXn Salsa</span>
         <span class="opt-price">$20</span>
       </div>
-      <div class="booking-opt-meta">Wednesday · 8:00 PM · 295 Dufferin St</div>
+      <div class="booking-opt-meta">Wednesday · 8:00 PM – 9:00 PM · 295 Dufferin St</div>
+    </div>
+
+    <div class="booking-option-card" onclick="selectDrawerOption(this, 'Zumba Fitness ($20)')">
+      <div class="booking-opt-title">
+        <span>Zumba Fitness</span>
+        <span class="opt-price">$20</span>
+      </div>
+      <div class="booking-opt-meta">Saturday · 10:30 AM – 11:30 AM · 509 Bloor St W</div>
+    </div>
+
+    <div class="booking-option-card" onclick="selectDrawerOption(this, 'Kids Afro / Hip Hop ($20)')">
+      <div class="booking-opt-title">
+        <span>Kids Afro / Hip Hop</span>
+        <span class="opt-price">$20</span>
+      </div>
+      <div class="booking-opt-meta">Tuesday · 6:00 PM – 7:00 PM · 509 Bloor St W</div>
     </div>
 
     <div class="booking-option-card" onclick="selectDrawerOption(this, 'Private Lessons ($80/hr)')">
@@ -2464,7 +3212,7 @@
         <span>Private Lessons</span>
         <span class="opt-price">$80/hr</span>
       </div>
-      <div class="booking-opt-meta">Toronto Mon–Sat · KW Sundays</div>
+      <div class="booking-opt-meta">Mon–Sat Toronto · KW Sundays</div>
     </div>
 
     <div class="drawer-notice">
@@ -2478,6 +3226,97 @@
       <a href="tel:+16472864209" class="btn-secondary" style="text-align: center; justify-content: center;">
         OR CALL 647-286-4209
       </a>
+    </div>
+  </aside>
+
+  <!-- AXIOM DEMO WATERMARK BADGE -->
+  <aside class="axiom-watermark" id="axiomWatermark" aria-label="Axiom demo credit">
+    <a href="https://getaxiom.ca/" target="_blank" rel="noopener noreferrer" class="axiom-watermark-link" title="Designed by Axiom Web">
+      <span class="axiom-badge-pill">DEMO</span>
+      <span class="axiom-by-text">Designed by</span>
+      <img src="/axiomtransparentlogo.webp" alt="Axiom Web Logo" class="axiom-watermark-logo">
+    </a>
+  </aside>
+
+  <!-- DEDICATED FULL-FEATURED MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="closeMobileNav()"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-nav-top">
+      <div style="display: flex; align-items: center; gap: 0.65rem;">
+        <img src="https://static.wixstatic.com/media/7e68de_2e094e688de747c488d42d0470e8f7d8~mv2.png" alt="Mil Pasos Emblem" style="width: 36px; height: 36px; object-fit: contain;">
+        <div>
+          <div style="font-family: var(--font-display); font-size: 1.15rem; color: #fff; line-height: 1.1;">MIL PASOS</div>
+          <div style="font-size: 0.6rem; color: var(--amber); letter-spacing: 0.12em; font-weight: 700;">TORONTO STUDIO</div>
+        </div>
+      </div>
+      <button class="mobile-nav-close" onclick="closeMobileNav()" aria-label="Close navigation menu">&times;</button>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li class="mobile-nav-link-item">
+        <a href="#motion" onclick="closeMobileNav()">
+          <span>In Motion</span>
+          <span class="mobile-nav-badge">REELS</span>
+        </a>
+      </li>
+      <li class="mobile-nav-link-item">
+        <a href="#classes" onclick="closeMobileNav()">
+          <span>Class Offerings</span>
+          <span class="mobile-nav-badge">STYLES</span>
+        </a>
+      </li>
+      <li class="mobile-nav-link-item">
+        <a href="#schedule" onclick="closeMobileNav()">
+          <span>Weekly Timetable</span>
+          <span class="mobile-nav-badge">SCHEDULE</span>
+        </a>
+      </li>
+      <li class="mobile-nav-link-item">
+        <a href="#passes" onclick="closeMobileNav()">
+          <span>Passes & Pricing</span>
+          <span class="mobile-nav-badge">FROM $13/CLASS</span>
+        </a>
+      </li>
+      <li class="mobile-nav-link-item">
+        <a href="#party" onclick="closeMobileNav()">
+          <span>Community & Socials</span>
+          <span class="mobile-nav-badge">NIGHTLIFE</span>
+        </a>
+      </li>
+      <li class="mobile-nav-link-item">
+        <a href="#people" onclick="closeMobileNav()">
+          <span>Julie & Rafa</span>
+          <span class="mobile-nav-badge">DIRECTORS</span>
+        </a>
+      </li>
+      <li class="mobile-nav-link-item">
+        <a href="#bespoke" onclick="closeMobileNav()">
+          <span>Private & Weddings</span>
+          <span class="mobile-nav-badge">BESPOKE</span>
+        </a>
+      </li>
+      <li class="mobile-nav-link-item">
+        <a href="#locations" onclick="closeMobileNav()">
+          <span>Studio Locations</span>
+          <span class="mobile-nav-badge">TORONTO & KW</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="mobile-nav-ctas">
+      <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="closeMobileNav(); openBookingDrawer('Cuban Salsa & Timba ($20)');">
+        RESERVE A SPOT ($20)
+      </button>
+      <a href="tel:+16472864209" class="btn-secondary" style="width: 100%; justify-content: center;">
+        CALL: (647) 286-4209
+      </a>
+      <div class="mobile-nav-footer-credit">
+        <span>Concept & Experience by</span>
+        <a href="https://getaxiom.ca/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.4rem; color: #fff; text-decoration: none;">
+          <strong style="color: var(--amber);">Axiom Web</strong>
+          <img src="/axiomtransparentlogo.webp" alt="Axiom Web Logo" height="15" width="auto">
+        </a>
+      </div>
     </div>
   </aside>
 
@@ -2688,15 +3527,40 @@
       drawerEmailLink.href = `mailto:milpasosstudio@gmail.com?subject=Booking%20${encodeURIComponent(optionTitle)}&body=Hi%20Julie%20and%20Rafa,%0D%0A%0D%0AI'd%20like%20to%20reserve%20a%20spot%20in%20${encodeURIComponent(optionTitle)}.%20Please%20confirm%20my%20spot!`;
     }
 
-    // 7. KEYBOARD NAVIGATION & ACCESSIBILITY
+    // 7. DEDICATED MOBILE NAVIGATION DRAWER
+    const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+    const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+
+    function openMobileNav() {
+      mobileNavOverlay.classList.add('active');
+      mobileNavDrawer.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileNav() {
+      mobileNavOverlay.classList.remove('active');
+      mobileNavDrawer.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openMobileNav();
+      });
+    }
+
+    // 8. KEYBOARD NAVIGATION & ACCESSIBILITY
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         closeCinemaModal();
         closeBookingDrawer();
+        closeMobileNav();
       }
     });
 
-    // 8. HORIZONTAL DRAG SCROLL FOR PERFORMANCE REEL
+    // 9. HORIZONTAL DRAG SCROLL FOR PERFORMANCE REEL
     const reelTrackWrapper = document.getElementById('reelTrack');
     let isDown = false;
     let startX;
@@ -2722,11 +3586,6 @@
       const x = e.pageX - reelTrackWrapper.offsetLeft;
       const walk = (x - startX) * 1.5;
       reelTrackWrapper.scrollLeft = scrollLeft - walk;
-    });
-
-    // Mobile nav smooth scroll helper
-    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-      openBookingDrawer('Class Schedule');
     });
   </script>
 </body>
