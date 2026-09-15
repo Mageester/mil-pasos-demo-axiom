@@ -2579,38 +2579,55 @@
       color: #fff;
     }
 
-    /* RESPONSIVE STYLING */
+    /* RESPONSIVE STYLING & MOBILE VIEWPORT PERFECTION */
     @media (max-width: 1024px) {
       .hero-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2.25rem;
       }
       .motion-bento {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
       }
       .party-grid {
         grid-template-columns: 1fr;
+        gap: 3rem;
       }
       .duo-layout {
         grid-template-columns: 1fr;
+        gap: 3rem;
       }
       .bespoke-grid {
         grid-template-columns: 1fr;
+        gap: 1.75rem;
       }
       .gallery-masonry {
         grid-template-columns: repeat(2, 1fr);
       }
       .footer-grid {
         grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
       }
     }
 
     @media (max-width: 768px) {
+      /* Mobile Root & Overflow Control */
+      html, body {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      /* Site Header & Actions */
       header.site-header {
         padding: 0.75rem 1rem;
       }
+      header.site-header.scrolled {
+        padding: 0.65rem 1rem;
+      }
       .header-container {
-        gap: 0.75rem;
+        gap: 0.65rem;
       }
       .nav-links {
         display: none;
@@ -2619,22 +2636,24 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 42px;
-        height: 42px;
+        width: 40px;
+        height: 40px;
         border-radius: 8px;
         background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.16);
         color: #fff;
         cursor: pointer;
         padding: 0;
         transition: background-color 0.2s;
+        flex-shrink: 0;
       }
       .mobile-menu-btn:hover {
         background: rgba(255, 255, 255, 0.16);
       }
       .clave-toggle-btn {
-        padding: 0.45rem 0.65rem;
+        padding: 0.4rem 0.65rem;
         gap: 0.35rem;
+        height: 38px;
       }
       .clave-toggle-btn span {
         display: none;
@@ -2642,62 +2661,622 @@
       .btn-header-cta {
         padding: 0.45rem 0.85rem;
         font-size: 0.75rem;
+        height: 38px;
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap;
+        letter-spacing: 0.03em;
       }
+
+      /* Sections General Spacing */
       section.hero-section {
-        padding: 6rem 1.25rem 3rem;
-        min-height: 88vh;
+        padding: 5.5rem 1.25rem 2.5rem;
+        min-height: calc(100svh - 20px);
+        display: flex;
+        align-items: center;
+      }
+      section.motion-section,
+      section.classes-section,
+      section.party-section,
+      section.voices-section,
+      section.duo-section,
+      section.bespoke-section,
+      section.gallery-section,
+      section.locations-section {
+        padding: 4.25rem 1.25rem;
+      }
+      section.reel-section {
+        padding: 4.25rem 0;
+      }
+      section.final-cta-section {
+        padding: 4.75rem 1.25rem;
+      }
+      footer.site-footer {
+        padding: 3.5rem 1.25rem 2.5rem;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      /* Headings & Section Lead Spacing */
+      .section-header-row,
+      .classes-header-row,
+      .schedule-intro-row,
+      .voices-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+      .section-title,
+      .classes-header-row h2,
+      .party-statement,
+      .duo-content h2,
+      .cta-title {
+        font-size: clamp(2.25rem, 8.8vw, 3.4rem);
+        line-height: 0.98;
+      }
+      .section-lead,
+      .classes-header-row p,
+      .party-desc,
+      .duo-lead,
+      .cta-sub {
+        font-size: 0.95rem;
+        line-height: 1.55;
+        max-width: 100%;
+      }
+
+      /* Hero Content & Kinetic Typography */
+      .hero-content {
+        gap: 1.75rem;
+      }
+      .hero-left-meta {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      .hero-badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.55rem;
+      }
+      .hero-location-tag {
+        font-size: 0.75rem;
       }
       .hero-title {
-        font-size: clamp(2.7rem, 11vw, 3.8rem);
-        line-height: 0.95;
+        font-size: clamp(2.7rem, 11.5vw, 3.75rem);
+        line-height: 1.02;
+        margin-bottom: 1.25rem;
+      }
+      .hero-title-mask {
+        padding-bottom: 0.16em;
+        margin-bottom: -0.16em;
+      }
+      .hero-clave-wave {
+        flex-wrap: wrap;
+        gap: 0.65rem;
+        margin-top: 0.5rem;
+      }
+      .clave-wave-tag {
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
       }
       .hero-right-box {
-        padding: 1.35rem;
+        padding: 1.35rem 1.15rem;
+        border-radius: 12px;
+        margin-bottom: 0;
+      }
+      .hero-credo {
+        font-size: 1.2rem;
+        gap: 0.4rem;
+        margin-bottom: 0.75rem;
+      }
+      .credo-word:not(:last-child)::after {
+        margin-left: 0.4rem;
+      }
+      .hero-desc {
+        font-size: 0.9375rem;
+        line-height: 1.55;
+        margin-bottom: 1.35rem;
       }
       .hero-actions {
         flex-direction: column;
         width: 100%;
         gap: 0.75rem;
       }
-      .hero-actions .btn-primary, .hero-actions .btn-secondary {
+      .hero-actions .btn-primary,
+      .hero-actions .btn-secondary {
         width: 100%;
         justify-content: center;
+        padding: 0.85rem 1.25rem;
+        font-size: 0.85rem;
+      }
+
+      /* Motion Section Bento */
+      .motion-bento {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+      .motion-featured-card {
+        aspect-ratio: 16 / 12;
+        border-radius: 14px;
+      }
+      .motion-overlay {
+        padding: 1.15rem;
+      }
+      .play-trigger {
+        width: 48px;
+        height: 48px;
+      }
+      .play-trigger svg {
+        width: 18px;
+        height: 18px;
+      }
+      .featured-video-meta h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.2rem;
+      }
+      .featured-video-meta p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+      }
+      .motion-reels-col {
+        gap: 1rem;
+      }
+      .motion-reel-card {
+        min-height: 160px;
+        border-radius: 14px;
+      }
+      .motion-reel-overlay {
+        padding: 1.15rem;
+      }
+      .motion-reel-title {
+        font-size: 1.15rem;
+      }
+      .motion-reel-desc {
+        font-size: 0.78rem;
+      }
+
+      /* Classes Grid & Mobile Non-Overlap Urgency Placement */
+      .classes-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .class-card {
+        border-radius: 14px;
+      }
+      .class-media {
+        height: 210px;
+      }
+      .class-tag-overlay {
+        top: 0.75rem;
+        left: 0.75rem;
+        font-size: 0.68rem;
+        padding: 0.25rem 0.65rem;
+      }
+      /* Prevent overlap: On mobile, position urgency badge at bottom-left, opposite price pill */
+      .class-urgency-slot {
+        position: absolute;
+        top: auto;
+        bottom: 0.75rem;
+        left: 0.75rem;
+        right: auto;
+        z-index: 4;
+      }
+      .class-urgency-indicator {
+        font-size: 0.68rem;
+        padding: 0.28rem 0.65rem;
+        gap: 0.35rem;
+      }
+      .class-price-pill {
+        bottom: 0.75rem;
+        right: 0.75rem;
+        font-size: 1rem;
+        padding: 0.25rem 0.65rem;
+      }
+      .class-body {
+        padding: 1.25rem 1.15rem;
+      }
+      .class-title {
+        font-size: 1.35rem;
+        margin-bottom: 0.5rem;
+      }
+      .class-meta-list {
+        font-size: 0.8125rem;
+        gap: 0.4rem;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+      }
+      .class-desc {
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
+      }
+      .class-card-actions {
+        gap: 0.5rem;
+      }
+      .btn-book-class {
+        padding: 0.7rem 1rem;
+        font-size: 0.8rem;
+      }
+      .class-urgency-banner {
+        padding: 0.45rem 0.65rem;
+        margin-bottom: 0.75rem;
+      }
+      .urgency-banner-inner {
+        align-items: flex-start;
+        gap: 0.45rem;
+      }
+      .urgency-strip-text {
+        font-size: 0.75rem;
+        line-height: 1.35;
+      }
+
+      /* Weekly Schedule Grid */
+      .schedule-block-container {
+        margin-top: 3.5rem;
+        padding-top: 2.5rem;
+      }
+      .schedule-days-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        margin-bottom: 2.5rem;
+      }
+      .schedule-day-card {
+        padding: 1.25rem 1rem;
+        border-radius: 12px;
+      }
+      .schedule-day-header {
+        margin-bottom: 1rem;
+        padding-bottom: 0.65rem;
+      }
+      .schedule-day-title {
+        font-size: 1.2rem;
+      }
+      .schedule-location-badge {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.5rem;
+      }
+      .schedule-item {
+        margin-bottom: 0.85rem;
+        padding-bottom: 0.85rem;
+      }
+      .schedule-time-row {
+        font-size: 0.78rem;
+      }
+      .schedule-class-name {
+        font-size: 1rem;
+      }
+      .schedule-class-details {
+        font-size: 0.78rem;
+      }
+
+      /* Passes & Packages Showcase */
+      .passes-showcase {
+        padding: 1.35rem 1rem;
+        border-radius: 14px;
+      }
+      .passes-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        margin-top: 1.5rem;
+      }
+      .pass-card {
+        padding: 1.4rem 1.15rem;
+        border-radius: 12px;
+      }
+      .pass-ribbon {
+        top: -10px;
+        left: 1rem;
+        font-size: 0.62rem;
+        padding: 0.2rem 0.6rem;
+      }
+      .pass-card-title {
+        font-size: 1.2rem;
+      }
+      .pass-card-price {
+        font-size: 1.85rem;
+        margin-bottom: 0.5rem;
+      }
+      .pass-card-desc {
+        font-size: 0.8125rem;
+        margin-bottom: 1.25rem;
+      }
+      .pass-card-cta {
+        padding: 0.65rem 0.85rem;
+        font-size: 0.8rem;
+      }
+
+      /* Party Section */
+      .party-pills {
+        gap: 0.45rem;
+        margin-bottom: 1.75rem;
+      }
+      .party-pill {
+        font-size: 0.72rem;
+        padding: 0.35rem 0.75rem;
       }
       .party-mosaic {
         grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .party-mosaic-img {
+        aspect-ratio: 16 / 10;
+        border-radius: 12px;
       }
       .party-mosaic-img:nth-child(2) {
-        transform: translateY(0);
+        transform: none;
       }
+
+      /* Community Voices Horizontal Track & Testimonials */
+      .voices-header-actions {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.75rem;
+      }
+      .voices-rating-summary {
+        padding: 0.45rem 0.85rem;
+        gap: 0.5rem;
+      }
+      .voices-rating-num {
+        font-size: 1.15rem;
+      }
+      .voices-rating-count {
+        font-size: 0.68rem;
+      }
+      .voices-nav-btn {
+        width: 40px;
+        height: 40px;
+      }
+      .voices-track-wrapper {
+        padding: 0.25rem 0 1.5rem;
+        margin: 0 -1.25rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+      }
+      .voice-card {
+        width: 86vw;
+        max-width: 340px;
+        min-width: 270px;
+        padding: 1.5rem 1.25rem 1.35rem;
+        border-radius: 16px;
+      }
+      .voice-stars {
+        font-size: 0.9rem;
+      }
+      .voice-tag {
+        font-size: 0.68rem;
+        padding: 0.2rem 0.6rem;
+      }
+      .voice-quote {
+        font-size: 0.92rem;
+        line-height: 1.55;
+        margin-bottom: 1.25rem;
+      }
+      .voice-author-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+      }
+      .voice-author-name {
+        font-size: 0.95rem;
+      }
+      .voice-author-role {
+        white-space: normal;
+        font-size: 0.75rem;
+        line-height: 1.35;
+      }
+      .voices-footer-hint {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+      .voices-footer-hint .btn-primary {
+        width: 100%;
+        justify-content: center;
+      }
+
+      /* Duo Julie & Rafa */
+      .duo-layout {
+        gap: 2rem;
+      }
+      .duo-visual-frame {
+        aspect-ratio: 4 / 3.8;
+        border-radius: 14px;
+      }
+      .duo-overlay-badge {
+        bottom: 0.85rem;
+        left: 0.85rem;
+        right: 0.85rem;
+        padding: 0.65rem 0.85rem;
+        border-radius: 10px;
+      }
+      .duo-overlay-badge strong {
+        font-size: 0.95rem;
+      }
+      .duo-overlay-badge span {
+        font-size: 0.68rem;
+      }
+      .bio-toggle-group {
+        gap: 0.4rem;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      .bio-toggle-btn {
+        flex: 1;
+        text-align: center;
+        padding: 0.5rem 0.65rem;
+        font-size: 0.75rem;
+      }
+      .bio-pane {
+        font-size: 0.875rem;
+        line-height: 1.6;
+      }
+
+      /* Film Reel Archive */
+      .reel-header-wrap {
+        padding: 0 1.25rem;
+        margin-bottom: 1.5rem;
+      }
+      .reel-track-wrapper {
+        padding: 0.5rem 1.25rem 1.5rem;
+      }
+      .reel-item {
+        width: 250px;
+        aspect-ratio: 9 / 13;
+        border-radius: 12px;
+      }
+      .reel-item-overlay {
+        padding: 1.15rem;
+      }
+      .reel-pill {
+        font-size: 0.65rem;
+        padding: 0.25rem 0.65rem;
+      }
+      .reel-meta h4 {
+        font-size: 1.15rem;
+      }
+      .reel-meta p {
+        font-size: 0.75rem;
+      }
+
+      /* Bespoke Private & Events */
+      .bespoke-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        margin-top: 1.75rem;
+      }
+      .bespoke-media {
+        height: 190px;
+      }
+      .bespoke-price-badge {
+        bottom: 0.75rem;
+        left: 0.75rem;
+        font-size: 0.85rem;
+        padding: 0.25rem 0.65rem;
+      }
+      .bespoke-body {
+        padding: 1.35rem 1.15rem;
+      }
+      .bespoke-title {
+        font-size: 1.3rem;
+      }
+      .bespoke-desc {
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
+      }
+      .btn-bespoke-cta {
+        padding: 0.65rem 1rem;
+        font-size: 0.8rem;
+        width: 100%;
+      }
+
+      /* Gallery Masonry */
       .gallery-masonry {
         grid-template-columns: 1fr;
-        grid-auto-rows: 240px;
+        grid-auto-rows: 210px;
+        gap: 1rem;
+        margin-top: 1.75rem;
       }
       .gallery-item.wide, .gallery-item.tall {
         grid-column: span 1;
         grid-row: span 1;
       }
-      .schedule-intro-row {
+      .gallery-item {
+        border-radius: 10px;
+      }
+      .gallery-item-overlay {
+        padding: 1rem;
+      }
+
+      /* Locations Grid */
+      .locations-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 1.75rem;
+      }
+      .location-card {
+        padding: 1.35rem 1.15rem;
+        border-radius: 14px;
+      }
+      .loc-tag {
+        font-size: 0.7rem;
+        margin-bottom: 0.5rem;
+      }
+      .location-card h3 {
+        font-size: 1.25rem;
+      }
+      .location-card p {
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
+      }
+
+      /* Final CTA */
+      .cta-actions {
         flex-direction: column;
-        align-items: flex-start;
+        width: 100%;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
       }
-      .passes-showcase {
-        padding: 1.5rem 1.25rem;
+      .cta-actions .btn-primary,
+      .cta-actions .btn-secondary {
+        width: 100%;
+        justify-content: center;
+        padding: 0.85rem 1.25rem;
       }
+      .direct-contacts {
+        flex-direction: column;
+        gap: 0.65rem;
+        font-size: 0.85rem;
+        align-items: center;
+      }
+
+      /* Footer */
       .footer-grid {
         grid-template-columns: 1fr;
-        gap: 2.25rem;
+        gap: 2rem;
+        margin-bottom: 2.25rem;
       }
+      .footer-brand h4 {
+        font-size: 1.35rem;
+      }
+      .footer-brand p {
+        font-size: 0.85rem;
+        line-height: 1.55;
+        margin-bottom: 1.25rem;
+      }
+      .footer-col h5 {
+        font-size: 0.78rem;
+        margin-bottom: 0.85rem;
+      }
+      .footer-col ul {
+        gap: 0.6rem;
+        font-size: 0.8125rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        font-size: 0.78rem;
+      }
+
+      /* Floating Watermark & Drawer States */
       .axiom-watermark {
-        bottom: 1rem;
-        right: 1rem;
+        bottom: 0.85rem;
+        right: 0.85rem;
       }
       .axiom-watermark-link {
-        padding: 0.35rem 0.65rem 0.35rem 0.55rem;
-        gap: 0.45rem;
+        padding: 0.35rem 0.65rem 0.35rem 0.5rem;
+        gap: 0.4rem;
       }
       .axiom-watermark-logo {
-        height: 16px;
+        height: 15px;
       }
       .axiom-badge-pill {
         font-size: 0.56rem;
@@ -2706,26 +3285,74 @@
       .axiom-by-text {
         font-size: 0.65rem;
       }
+      body.drawer-open .axiom-watermark,
+      body.nav-open .axiom-watermark {
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(16px);
+      }
     }
 
     @media (max-width: 480px) {
-      .brand-logo .logo-title {
-        font-size: 1.1rem;
+      /* Tight-screen Header Optimization */
+      header.site-header {
+        padding: 0.65rem 0.85rem;
       }
-      .brand-logo .logo-sub {
-        font-size: 0.55rem;
+      .header-container {
+        gap: 0.5rem;
+      }
+      .brand-logo {
+        gap: 0.5rem !important;
       }
       .brand-logo img {
         width: 32px !important;
         height: 32px !important;
       }
-      .classes-grid {
-        grid-template-columns: 1fr;
+      .brand-logo .logo-title {
+        font-size: 1.05rem;
       }
+      .brand-logo .logo-sub {
+        font-size: 0.52rem;
+        letter-spacing: 0.12em;
+      }
+      .header-actions {
+        gap: 0.4rem;
+      }
+      .clave-toggle-btn {
+        padding: 0.38rem 0.55rem;
+        height: 34px;
+      }
+      .btn-header-cta {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.72rem;
+        height: 34px;
+      }
+      .mobile-menu-btn {
+        width: 36px;
+        height: 36px;
+      }
+
+      /* Shutter Curtain on Mobile */
+      .curtain-emblem-wrap {
+        width: 62px;
+        height: 62px;
+        margin-bottom: 0.85rem;
+      }
+      .curtain-title {
+        font-size: 1.45rem;
+        letter-spacing: 0.12em;
+      }
+      .curtain-sub {
+        font-size: 0.65rem;
+        letter-spacing: 0.16em;
+      }
+
+      /* Filter Tabs */
       .filter-tabs {
         overflow-x: auto;
         flex-wrap: nowrap;
         padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
       }
@@ -2734,21 +3361,77 @@
       }
       .filter-btn {
         flex-shrink: 0;
+        padding: 0.45rem 0.95rem;
+        font-size: 0.72rem;
       }
+
+      /* Booking Drawer */
       .booking-drawer {
         width: 100%;
         max-width: 100%;
-        padding: 1.75rem 1.25rem;
+        padding: 1.5rem 1.15rem;
+      }
+      .drawer-header h3 {
+        font-size: 1.35rem;
+      }
+      .booking-option-card {
+        padding: 1rem;
+        border-radius: 10px;
+        margin-bottom: 0.75rem;
+      }
+      .booking-opt-title {
+        font-size: 0.95rem;
+      }
+      .booking-opt-meta {
+        font-size: 0.75rem;
+      }
+      .drawer-notice {
+        padding: 0.75rem 0.85rem;
+        font-size: 0.78rem;
+        margin: 1.25rem 0;
+      }
+
+      /* Cinema Modal Frame */
+      .cinema-modal {
+        padding: 0.75rem;
       }
       .modal-frame {
-        width: 96%;
-      }
-      .bio-tabs {
         width: 100%;
+        border-radius: 12px;
       }
-      .bio-toggle-btn {
-        flex: 1;
-        text-align: center;
+      .modal-close-btn {
+        top: -38px;
+        right: 2px;
+        font-size: 1.8rem;
+      }
+
+      /* Mobile Navigation Drawer */
+      .mobile-nav-drawer {
+        width: 86%;
+        max-width: 330px;
+        padding: 1.35rem 1.15rem;
+      }
+      .mobile-nav-link-item a {
+        font-size: 1rem;
+        padding: 0.65rem 0.75rem;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .btn-header-cta {
+        padding: 0.35rem 0.6rem;
+        font-size: 0.68rem;
+      }
+      .brand-logo .logo-sub {
+        display: none;
+      }
+      .hero-title {
+        font-size: 2.45rem;
+      }
+      .voice-card {
+        width: 90vw;
+        min-width: 250px;
+        padding: 1.35rem 1rem;
       }
     }
 
@@ -4421,12 +5104,14 @@
       }
       bookingOverlay.classList.add('active');
       bookingDrawer.classList.add('active');
+      document.body.classList.add('drawer-open');
       document.body.style.overflow = 'hidden';
     }
 
     function closeBookingDrawer() {
       bookingOverlay.classList.remove('active');
       bookingDrawer.classList.remove('active');
+      document.body.classList.remove('drawer-open');
       document.body.style.overflow = '';
     }
 
@@ -4445,12 +5130,14 @@
     function openMobileNav() {
       mobileNavOverlay.classList.add('active');
       mobileNavDrawer.classList.add('active');
+      document.body.classList.add('nav-open');
       document.body.style.overflow = 'hidden';
     }
 
     function closeMobileNav() {
       mobileNavOverlay.classList.remove('active');
       mobileNavDrawer.classList.remove('active');
+      document.body.classList.remove('nav-open');
       document.body.style.overflow = '';
     }
 
