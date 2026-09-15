@@ -1,0 +1,6 @@
+{
+  "name": "Mil Pasos Studio",
+  "description": "A cinematic Latin dance experience for Mil Pasos Studio Toronto — authentic Cuban Salsa, Timba, Zumba, and vibrant community led by Julie and Rafa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

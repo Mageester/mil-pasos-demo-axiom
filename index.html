@@ -1,0 +1,2733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mil Pasos Studio — Cinematic Latin Dance Experience | Toronto</title>
+  <meta name="description" content="Authentic Cuban Salsa, Timba, Zumba, and vibrant community in Toronto led by Julie and Rafa. Step into rhythm.">
+  <meta property="og:title" content="Mil Pasos Studio — Toronto">
+  <meta property="og:description" content="A cinematic Latin dance experience. Authentic Cuban Salsa, Timba, Zumba, and private coaching led by Julie and Rafa.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Syne (Expressive Editorial Display) + Plus Jakarta Sans (Crisp Modern Grotesk) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS RESET & VARIABLES */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --night: #0B0B0C;
+      --soft-black: #141214;
+      --card-dark: #19171A;
+      --ivory: #F5EFE7;
+      --ivory-muted: #E5DDD3;
+      --coral: #FF492C;
+      --coral-hover: #E0371D;
+      --sunset: #FF7A38;
+      --crimson: #B9263B;
+      --teal: #1FB5AD;
+      --amber: #E8A857;
+      --gold: #D49A4C;
+      --text-main: #FFFFFF;
+      --text-muted: #A39FA8;
+      --text-dark: #141214;
+      --text-dark-muted: #66616A;
+      --border-dark: rgba(255, 255, 255, 0.12);
+      --border-light: rgba(20, 18, 20, 0.12);
+      --font-display: 'Syne', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --ease-cinema: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--night);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      overflow-x: hidden;
+      background-color: var(--night);
+      line-height: 1.6;
+    }
+
+    /* TYPOGRAPHY HELPERS */
+    h1, h2, h3, h4, .font-display {
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      line-height: 0.95;
+      font-weight: 800;
+    }
+
+    .editorial-eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .eyebrow-coral { color: var(--coral); }
+    .eyebrow-amber { color: var(--amber); }
+    .eyebrow-dark { color: var(--coral); }
+
+    /* SUBTLE FILM GRAIN OVERLAY */
+    .film-grain {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    /* HEADER & NAVIGATION */
+    header.site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 90;
+      padding: 1.25rem 2rem;
+      transition: background-color 0.4s var(--ease-cinema), padding 0.4s var(--ease-cinema), backdrop-filter 0.4s;
+    }
+    header.site-header.scrolled {
+      background-color: rgba(11, 11, 12, 0.92);
+      backdrop-filter: blur(14px);
+      padding: 0.85rem 2rem;
+      border-bottom: 1px solid var(--border-dark);
+    }
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: #fff;
+    }
+    .brand-logo .logo-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      line-height: 1;
+    }
+    .brand-logo .logo-sub {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      color: var(--amber);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-link {
+      color: rgba(255, 255, 255, 0.78);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+    .nav-link:hover {
+      color: #fff;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* CLAVE AUDIO PULSE BUTTON */
+    .clave-toggle-btn {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #fff;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .clave-toggle-btn:hover {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: var(--amber);
+    }
+    .clave-indicator {
+      display: flex;
+      gap: 2px;
+      align-items: flex-end;
+      height: 12px;
+    }
+    .clave-bar {
+      width: 2px;
+      height: 4px;
+      background-color: var(--amber);
+      border-radius: 1px;
+      transition: height 0.15s;
+    }
+    .clave-toggle-btn.playing .clave-bar:nth-child(1) { animation: bounce 0.6s infinite ease-in-out alternate; }
+    .clave-toggle-btn.playing .clave-bar:nth-child(2) { animation: bounce 0.8s infinite 0.2s ease-in-out alternate; }
+    .clave-toggle-btn.playing .clave-bar:nth-child(3) { animation: bounce 0.5s infinite 0.1s ease-in-out alternate; }
+
+    @keyframes bounce {
+      0% { height: 3px; }
+      100% { height: 12px; }
+    }
+
+    .btn-header-cta {
+      background-color: var(--coral);
+      color: #fff;
+      padding: 0.55rem 1.25rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: background-color 0.2s, transform 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-header-cta:hover {
+      background-color: var(--coral-hover);
+      transform: translateY(-1px);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: transparent;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    /* HERO SECTION */
+    section.hero-section {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      padding: 8rem 2rem 5rem;
+      overflow: hidden;
+    }
+    .hero-video-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      overflow: hidden;
+    }
+    .hero-video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: brightness(0.65) contrast(1.1);
+      transform: scale(1.02);
+      transition: transform 10s linear;
+    }
+    .hero-gradient {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: radial-gradient(circle at 75% 30%, rgba(255, 73, 44, 0.18) 0%, transparent 60%),
+                  linear-gradient(to top, #0B0B0C 0%, rgba(11, 11, 12, 0.75) 45%, rgba(11, 11, 12, 0.3) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      align-items: flex-end;
+      gap: 3rem;
+    }
+    .hero-left-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+    .hero-badge {
+      background: rgba(255, 73, 44, 0.2);
+      border: 1px solid rgba(255, 73, 44, 0.4);
+      color: #FF7A38;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .hero-location-tag {
+      font-size: 0.8125rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .hero-title {
+      font-size: clamp(3.2rem, 7.5vw, 6.8rem);
+      line-height: 0.92;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+    .hero-title span.highlight-coral {
+      color: var(--coral);
+      display: inline-block;
+    }
+
+    .hero-right-box {
+      background: rgba(20, 18, 20, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(16px);
+      padding: 2.25rem;
+      border-radius: 12px;
+      margin-bottom: 0.5rem;
+    }
+    .hero-credo {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      letter-spacing: 0.04em;
+      color: var(--amber);
+      margin-bottom: 1rem;
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .hero-credo span {
+      position: relative;
+    }
+    .hero-credo span:not(:last-child)::after {
+      content: "·";
+      margin-left: 0.6rem;
+      color: rgba(255, 255, 255, 0.4);
+    }
+    .hero-desc {
+      font-size: 1rem;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 2rem;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background-color: var(--coral);
+      color: #fff;
+      padding: 0.85rem 1.85rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background-color: var(--coral-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(255, 73, 44, 0.35);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #fff;
+      padding: 0.85rem 1.85rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: #fff;
+    }
+
+    /* SECTION 2: MIL PASOS IN MOTION */
+    section.motion-section {
+      padding: 6rem 2rem;
+      background-color: var(--night);
+      position: relative;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .section-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .section-title {
+      font-size: clamp(2.4rem, 4.8vw, 4.2rem);
+      line-height: 0.95;
+    }
+    .section-lead {
+      max-width: 500px;
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* ASYMMETRICAL MOTION GRID */
+    .motion-bento {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 1.75rem;
+    }
+    .motion-featured-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 16 / 10;
+      background: #141214;
+      border: 1px solid var(--border-dark);
+      cursor: pointer;
+      group: relative;
+    }
+    .motion-featured-card video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-cinema);
+    }
+    .motion-featured-card:hover video {
+      transform: scale(1.03);
+    }
+    .motion-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(11, 11, 12, 0.88) 0%, rgba(11, 11, 12, 0.2) 60%, transparent 100%);
+      padding: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .badge-pill {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .play-trigger {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--coral);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 28px rgba(255, 73, 44, 0.45);
+      transition: transform 0.3s var(--ease-cinema), background-color 0.2s;
+    }
+    .motion-featured-card:hover .play-trigger {
+      transform: scale(1.12);
+      background: #ff5e44;
+    }
+    .featured-video-meta h3 {
+      font-size: 1.8rem;
+      margin-bottom: 0.4rem;
+    }
+    .featured-video-meta p {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.9375rem;
+    }
+
+    .motion-reels-col {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .motion-reel-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      flex: 1;
+      min-height: 200px;
+      background: #141214;
+      border: 1px solid var(--border-dark);
+      cursor: pointer;
+    }
+    .motion-reel-card video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s var(--ease-cinema);
+    }
+    .motion-reel-card:hover video {
+      transform: scale(1.04);
+    }
+    .motion-reel-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(11, 11, 12, 0.85) 0%, rgba(11, 11, 12, 0.1) 60%);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .motion-reel-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin-bottom: 0.25rem;
+    }
+    .motion-reel-desc {
+      font-size: 0.8125rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* SECTION 3: CLASSES (WARM IVORY TRANSITION) */
+    section.classes-section {
+      background-color: var(--ivory);
+      color: var(--text-dark);
+      padding: 6.5rem 2rem;
+      position: relative;
+    }
+    .classes-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .classes-header-row h2 {
+      font-size: clamp(2.4rem, 4.8vw, 4.2rem);
+      color: var(--text-dark);
+    }
+    .classes-header-row p {
+      max-width: 480px;
+      color: var(--text-dark-muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* CATEGORY FILTER TABS */
+    .filter-tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      background: rgba(20, 18, 20, 0.06);
+      border: 1px solid rgba(20, 18, 20, 0.14);
+      color: var(--text-dark);
+      padding: 0.55rem 1.25rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover {
+      background: rgba(20, 18, 20, 0.12);
+    }
+    .filter-btn.active {
+      background: var(--text-dark);
+      color: var(--ivory);
+      border-color: var(--text-dark);
+    }
+
+    /* CLASS CARDS GRID */
+    .classes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.75rem;
+    }
+    .class-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      /* Staggered entrance animation: fade and slide up */
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.75s var(--ease-cinema), transform 0.75s var(--ease-cinema), box-shadow 0.3s ease;
+      will-change: opacity, transform;
+    }
+    .class-card.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .class-card.in-view:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 42px rgba(20, 18, 20, 0.12);
+    }
+    /* Staggered transition delays */
+    .class-card:nth-child(1) { transition-delay: 0.08s; }
+    .class-card:nth-child(2) { transition-delay: 0.18s; }
+    .class-card:nth-child(3) { transition-delay: 0.28s; }
+    .class-card:nth-child(4) { transition-delay: 0.38s; }
+    .class-card:nth-child(5) { transition-delay: 0.48s; }
+    .class-card:nth-child(6) { transition-delay: 0.58s; }
+    .class-media {
+      position: relative;
+      height: 230px;
+      background: #232024;
+      overflow: hidden;
+    }
+    .class-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-cinema);
+    }
+    .class-card:hover .class-media img {
+      transform: scale(1.05);
+    }
+    .class-tag-overlay {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: rgba(11, 11, 12, 0.8);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+    .class-price-pill {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      background: var(--coral);
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 800;
+      padding: 0.35rem 0.85rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(255, 73, 44, 0.3);
+    }
+
+    .class-body {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .class-title {
+      font-size: 1.55rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-dark);
+    }
+    .class-meta-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid rgba(20, 18, 20, 0.08);
+      font-size: 0.875rem;
+      color: var(--text-dark-muted);
+    }
+    .class-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+    }
+    .class-meta-item svg {
+      width: 16px;
+      height: 16px;
+      color: var(--coral);
+      flex-shrink: 0;
+    }
+    .class-desc {
+      font-size: 0.9375rem;
+      color: #4A464D;
+      line-height: 1.55;
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+    .class-card-actions {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
+    .btn-book-class {
+      background: var(--text-dark);
+      color: #fff;
+      padding: 0.75rem 1.25rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      text-align: center;
+      flex: 1;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .btn-book-class:hover {
+      background: var(--coral);
+    }
+    .btn-class-details {
+      background: transparent;
+      border: 1px solid rgba(20, 18, 20, 0.2);
+      color: var(--text-dark);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-class-details:hover {
+      border-color: var(--text-dark);
+      background: rgba(20, 18, 20, 0.06);
+    }
+
+    /* SECTION 4: PARTY / COMMUNITY MOMENT ("THIS IS MORE THAN A CLASS") */
+    section.party-section {
+      background-color: #0E0C0F;
+      padding: 7rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .party-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      filter: blur(140px);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .party-glow-1 {
+      top: 10%;
+      left: -10%;
+      background: rgba(255, 73, 44, 0.15);
+    }
+    .party-glow-2 {
+      bottom: 5%;
+      right: -10%;
+      background: rgba(31, 181, 173, 0.14);
+    }
+
+    .party-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .party-statement {
+      font-size: clamp(3rem, 6.2vw, 5.4rem);
+      line-height: 0.93;
+      margin-bottom: 1.75rem;
+    }
+    .party-desc {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.82);
+      margin-bottom: 2.25rem;
+    }
+    .party-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-bottom: 2.5rem;
+    }
+    .party-pill {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--ivory);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      padding: 0.4rem 0.95rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+
+    .party-mosaic {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+    .party-mosaic-img {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+      border: 1px solid var(--border-dark);
+    }
+    .party-mosaic-img:nth-child(2) {
+      transform: translateY(2rem);
+    }
+    .party-mosaic-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-cinema);
+    }
+    .party-mosaic-img:hover img {
+      transform: scale(1.05);
+    }
+    .party-img-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      background: linear-gradient(to top, rgba(11, 11, 12, 0.9), transparent);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.9);
+      letter-spacing: 0.05em;
+    }
+
+    /* SECTION 5: JULIE + RAFA (THE PEOPLE BEHIND THE RHYTHM) */
+    section.duo-section {
+      background-color: var(--ivory);
+      color: var(--text-dark);
+      padding: 7rem 2rem;
+      position: relative;
+    }
+    .duo-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 4.5rem;
+      align-items: center;
+    }
+    .duo-visual-frame {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 5 / 6;
+      border: 1px solid rgba(20, 18, 20, 0.12);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08);
+      background: #141214;
+    }
+    .duo-visual-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .duo-overlay-badge {
+      position: absolute;
+      bottom: 1.75rem;
+      left: 1.75rem;
+      background: rgba(11, 11, 12, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      color: #fff;
+    }
+    .duo-overlay-badge strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--amber);
+      margin-bottom: 0.2rem;
+    }
+    .duo-overlay-badge span {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.7);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .duo-content h2 {
+      font-size: clamp(2.6rem, 5vw, 4.4rem);
+      margin-bottom: 1.5rem;
+      color: var(--text-dark);
+    }
+    .duo-lead {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: var(--text-dark);
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+
+    /* BIO TABS */
+    .bio-toggle-group {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .bio-toggle-btn {
+      background: rgba(20, 18, 20, 0.08);
+      border: none;
+      padding: 0.5rem 1.25rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--text-dark-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .bio-toggle-btn.active {
+      background: var(--coral);
+      color: #fff;
+    }
+    .bio-pane {
+      display: none;
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: var(--text-dark-muted);
+    }
+    .bio-pane.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+    .bio-pane ul {
+      margin-top: 1rem;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .bio-pane li {
+      position: relative;
+      padding-left: 1.25rem;
+    }
+    .bio-pane li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--coral);
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* SECTION 6: FILM REEL / BACKSTAGE ARCHIVE */
+    section.reel-section {
+      background-color: var(--night);
+      padding: 6.5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .reel-header-wrap {
+      padding: 0 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .reel-track-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      padding: 1rem 2rem 2rem;
+      scrollbar-width: thin;
+      scrollbar-color: var(--coral) transparent;
+      -webkit-overflow-scrolling: touch;
+      cursor: grab;
+    }
+    .reel-track {
+      display: flex;
+      gap: 1.5rem;
+      width: max-content;
+    }
+    .reel-item {
+      width: 320px;
+      aspect-ratio: 9 / 14;
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+      background: #141214;
+      border: 1px solid var(--border-dark);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .reel-item video, .reel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s var(--ease-cinema);
+    }
+    .reel-item:hover video, .reel-item:hover img {
+      transform: scale(1.04);
+    }
+    .reel-item-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(11, 11, 12, 0.9) 0%, rgba(11, 11, 12, 0.2) 60%);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .reel-pill {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.1em;
+      align-self: flex-start;
+      text-transform: uppercase;
+    }
+    .reel-meta h4 {
+      font-size: 1.35rem;
+      margin-bottom: 0.3rem;
+    }
+    .reel-meta p {
+      font-size: 0.8125rem;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    /* SECTION 7: PRIVATE COACHING / WEDDINGS / EVENTS */
+    section.bespoke-section {
+      background-color: var(--soft-black);
+      padding: 7rem 2rem;
+      border-top: 1px solid var(--border-dark);
+    }
+    .bespoke-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      margin-top: 3.5rem;
+    }
+    .bespoke-card {
+      background: var(--card-dark);
+      border: 1px solid var(--border-dark);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s var(--ease-cinema);
+    }
+    .bespoke-card:hover {
+      transform: translateY(-4px);
+    }
+    .bespoke-media {
+      height: 240px;
+      position: relative;
+    }
+    .bespoke-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .bespoke-price-badge {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      background: rgba(11, 11, 12, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--amber);
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 800;
+      padding: 0.35rem 0.85rem;
+      border-radius: 8px;
+    }
+    .bespoke-body {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .bespoke-title {
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+    }
+    .bespoke-desc {
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      margin-bottom: 1.75rem;
+      flex: 1;
+    }
+    .btn-bespoke-cta {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #fff;
+      padding: 0.75rem 1.25rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .btn-bespoke-cta:hover {
+      background: var(--coral);
+      border-color: var(--coral);
+    }
+
+    /* SECTION 8: GET INSPIRED (EDITORIAL COLLAGE) */
+    section.gallery-section {
+      background-color: var(--ivory);
+      color: var(--text-dark);
+      padding: 7rem 2rem;
+    }
+    .gallery-masonry {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 240px;
+      gap: 1.25rem;
+      margin-top: 3.5rem;
+    }
+    .gallery-item {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      background: #232024;
+    }
+    .gallery-item.tall {
+      grid-row: span 2;
+    }
+    .gallery-item.wide {
+      grid-column: span 2;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-cinema);
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-item-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(11, 11, 12, 0.6);
+      opacity: 0;
+      transition: opacity 0.3s;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.25rem;
+      color: #fff;
+    }
+    .gallery-item:hover .gallery-item-overlay {
+      opacity: 1;
+    }
+    .gallery-item-overlay span {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    /* SECTION 9: WHERE WE DANCE (LOCATIONS) */
+    section.locations-section {
+      background-color: var(--night);
+      padding: 6.5rem 2rem;
+      border-top: 1px solid var(--border-dark);
+    }
+    .locations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .location-card {
+      background: var(--card-dark);
+      border: 1px solid var(--border-dark);
+      padding: 2.25rem;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .loc-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--coral);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .location-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .location-card p {
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    .loc-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .loc-link:hover {
+      color: var(--amber);
+    }
+
+    /* SECTION 10: FINAL CINEMATIC CTA */
+    section.final-cta-section {
+      position: relative;
+      padding: 8.5rem 2rem;
+      background-color: #070708;
+      text-align: center;
+      overflow: hidden;
+    }
+    .cta-backdrop {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      opacity: 0.35;
+    }
+    .cta-backdrop img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.5) contrast(1.2);
+    }
+    .cta-gradient-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: radial-gradient(circle at center, rgba(255, 73, 44, 0.22) 0%, rgba(7, 7, 8, 0.95) 75%);
+    }
+    .cta-inner {
+      position: relative;
+      z-index: 3;
+      max-width: 840px;
+      margin: 0 auto;
+    }
+    .cta-title {
+      font-size: clamp(3rem, 7vw, 5.8rem);
+      line-height: 0.92;
+      margin-bottom: 1.5rem;
+    }
+    .cta-sub {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 2.75rem;
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .direct-contacts {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .direct-contacts a {
+      color: var(--amber);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .direct-contacts a:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+    footer.site-footer {
+      background-color: #070708;
+      border-top: 1px solid var(--border-dark);
+      padding: 5rem 2rem 3rem;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem;
+      max-width: 1400px;
+      margin: 0 auto 4rem;
+    }
+    .footer-brand h4 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .footer-brand p {
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      max-width: 320px;
+    }
+    .footer-col h5 {
+      color: #fff;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .footer-col a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover {
+      color: #fff;
+    }
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8125rem;
+    }
+
+    /* CINEMA VIDEO MODAL */
+    .cinema-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(5, 5, 6, 0.95);
+      backdrop-filter: blur(20px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .cinema-modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal-frame {
+      max-width: 1100px;
+      width: 100%;
+      background: #000;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+      position: relative;
+    }
+    .modal-video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+    }
+    .modal-video-container iframe,
+    .modal-video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .modal-close-btn {
+      position: absolute;
+      top: -45px;
+      right: 0;
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* BOOKING DRAWER MODAL */
+    .booking-drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 5, 6, 0.75);
+      backdrop-filter: blur(12px);
+      z-index: 9998;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .booking-drawer-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .booking-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      max-width: 480px;
+      height: 100vh;
+      background: #141214;
+      border-left: 1px solid var(--border-dark);
+      z-index: 9999;
+      padding: 2.5rem 2rem;
+      overflow-y: auto;
+      transform: translateX(100%);
+      transition: transform 0.4s var(--ease-cinema);
+      display: flex;
+      flex-direction: column;
+    }
+    .booking-drawer.active {
+      transform: translateX(0);
+    }
+    .drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border-dark);
+    }
+    .drawer-header h3 {
+      font-size: 1.6rem;
+    }
+    .drawer-close-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: #fff;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .booking-option-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-dark);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .booking-option-card:hover, .booking-option-card.selected {
+      border-color: var(--coral);
+      background: rgba(255, 73, 44, 0.08);
+    }
+    .booking-opt-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    .booking-opt-title span.opt-price {
+      color: var(--amber);
+      font-family: var(--font-display);
+    }
+    .booking-opt-meta {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+
+    .drawer-notice {
+      background: rgba(232, 168, 87, 0.1);
+      border: 1px solid rgba(232, 168, 87, 0.3);
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 0.8125rem;
+      color: var(--amber);
+      margin: 1.5rem 0;
+      line-height: 1.5;
+    }
+
+    /* RESPONSIVE STYLING */
+    @media (max-width: 1024px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .motion-bento {
+        grid-template-columns: 1fr;
+      }
+      .party-grid {
+        grid-template-columns: 1fr;
+      }
+      .duo-layout {
+        grid-template-columns: 1fr;
+      }
+      .bespoke-grid {
+        grid-template-columns: 1fr;
+      }
+      .gallery-masonry {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header.site-header {
+        padding: 1rem 1.25rem;
+      }
+      .nav-links {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      section.hero-section {
+        padding: 6.5rem 1.25rem 3.5rem;
+        min-height: 90vh;
+      }
+      .hero-title {
+        font-size: 3.2rem;
+      }
+      .hero-right-box {
+        padding: 1.5rem;
+      }
+      .party-mosaic {
+        grid-template-columns: 1fr;
+      }
+      .party-mosaic-img:nth-child(2) {
+        transform: translateY(0);
+      }
+      .gallery-masonry {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 260px;
+      }
+      .gallery-item.wide, .gallery-item.tall {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Subtle Film Grain Atmosphere -->
+  <div class="film-grain" aria-hidden="true"></div>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" aria-label="Mil Pasos Studio Toronto Homepage" style="flex-direction: row; align-items: center; gap: 0.85rem;">
+        <img src="https://static.wixstatic.com/media/7e68de_2e094e688de747c488d42d0470e8f7d8~mv2.png" alt="Mil Pasos Studio Emblem" style="width: 42px; height: 42px; object-fit: contain; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));">
+        <div style="display: flex; flex-direction: column;">
+          <span class="logo-title">MIL PASOS</span>
+          <span class="logo-sub">STUDIO · TORONTO</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#motion" class="nav-link">In Motion</a>
+        <a href="#classes" class="nav-link">Classes</a>
+        <a href="#party" class="nav-link">Community</a>
+        <a href="#people" class="nav-link">Julie & Rafa</a>
+        <a href="#bespoke" class="nav-link">Private & Events</a>
+        <a href="#locations" class="nav-link">Locations</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Interactive Clave Rhythm Audio Toggle -->
+        <button class="clave-toggle-btn" id="claveAudioBtn" title="Play Cuban Clave Rhythm Pulse" aria-label="Toggle Cuban rhythm audio pulse">
+          <div class="clave-indicator">
+            <div class="clave-bar"></div>
+            <div class="clave-bar"></div>
+            <div class="clave-bar"></div>
+          </div>
+          <span id="claveBtnText">HEAR THE ROOM</span>
+        </button>
+
+        <button class="btn-header-cta" onclick="openBookingDrawer('Cuban Salsa & Timba')">
+          Book Class
+        </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. CINEMATIC HERO -->
+  <section class="hero-section" id="hero">
+    <div class="hero-video-wrapper">
+      <video autoplay muted loop playsinline poster="https://static.wixstatic.com/media/7e68de_580356972b934176a4600bdb61c12200~mv2.jpg">
+        <!-- High energy Latin couple salsa video stream with fallback -->
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-couple-dancing-salsa-together-41804-large.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-gradient"></div>
+
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-left-meta">
+          <span class="hero-badge">Authentic Cuban & Latin</span>
+          <span class="hero-location-tag">Downtown West · Toronto</span>
+        </div>
+        <h1 class="hero-title">
+          STEP INTO<br>
+          <span class="highlight-coral">RHYTHM.</span>
+        </h1>
+      </div>
+
+      <div class="hero-right-box">
+        <div class="hero-credo">
+          <span>MOVE</span>
+          <span>CONNECT</span>
+          <span>CELEBRATE</span>
+        </div>
+        <p class="hero-desc">
+          Authentic Cuban & Latin dance, fitness, private coaching, and performances led by Julie, Rafa, and the Mil Pasos community.
+        </p>
+        <div class="hero-actions">
+          <a href="#classes" class="btn-primary">
+            FIND YOUR CLASS
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <button class="btn-secondary" onclick="openCinemaModal('featured')" aria-label="Watch Mil Pasos reel">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            WATCH REEL
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. MIL PASOS IN MOTION -->
+  <section class="motion-section" id="motion">
+    <div class="container">
+      <div class="section-header-row">
+        <div>
+          <span class="editorial-eyebrow eyebrow-coral">The Pulse of Toronto</span>
+          <h2 class="section-title">MIL PASOS<br>IN MOTION</h2>
+        </div>
+        <p class="section-lead">
+          Real dance isn’t an exercise in repetition—it’s an explosion of human energy. Explore our signature Cuban salsa, Timba, Zumba, and stage routines.
+        </p>
+      </div>
+
+      <div class="motion-bento">
+        <!-- Large Featured Video -->
+        <div class="motion-featured-card" onclick="openCinemaModal('featured')">
+          <video autoplay muted loop playsinline poster="https://static.wixstatic.com/media/7e68de_4c7090e44beb48f6b610798eb54814c4~mv2.jpg">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-people-dancing-at-a-party-with-red-lights-42517-large.mp4" type="video/mp4">
+          </video>
+          <div class="motion-overlay">
+            <span class="badge-pill">FEATURED PERFORMANCE · LATIN FUSION</span>
+            <div class="d-flex" style="display:flex; justify-content:space-between; align-items:flex-end;">
+              <div class="featured-video-meta">
+                <h3>Julie & Rafa Live Showcase</h3>
+                <p>Cuban Salsa, Timba & Latin Fusion · Flying Dance Festival</p>
+              </div>
+              <div class="play-trigger" aria-label="Play Featured Video">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side Reels -->
+        <div class="motion-reels-col">
+          <div class="motion-reel-card" onclick="openCinemaModal('zumba')">
+            <video autoplay muted loop playsinline poster="https://static.wixstatic.com/media/7e68de_fa91e644f3084d24be6c6ca2a1eaa6bc~mv2.jpg">
+              <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-dancing-zumba-in-a-studio-41802-large.mp4" type="video/mp4">
+            </video>
+            <div class="motion-reel-overlay">
+              <span class="badge-pill" style="margin-bottom: auto;">ZUMBA & CARDIO</span>
+              <h4 class="motion-reel-title">High Energy Fitness</h4>
+              <p class="motion-reel-desc">Tuesday 7 PM · 802 Dundas St W</p>
+            </div>
+          </div>
+
+          <div class="motion-reel-card" onclick="openCinemaModal('womxn')">
+            <video autoplay muted loop playsinline poster="https://static.wixstatic.com/media/7e68de_aba9fd5bddeb470283b5afed8fb5c332f000.jpg">
+              <source src="https://assets.mixkit.co/videos/preview/mixkit-group-of-people-dancing-zumba-41805-large.mp4" type="video/mp4">
+            </video>
+            <div class="motion-reel-overlay">
+              <span class="badge-pill" style="margin-bottom: auto;">ONLY WOMXN SALSA</span>
+              <h4 class="motion-reel-title">Empowered Lady Styling</h4>
+              <p class="motion-reel-desc">Wednesday 8 PM · 295 Dufferin St</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. CLASSES / FIND YOUR RHYTHM (WARM IVORY CONTRAST) -->
+  <section class="classes-section" id="classes">
+    <div class="container">
+      <div class="classes-header-row">
+        <div>
+          <span class="editorial-eyebrow eyebrow-dark">Weekly Schedule & Offerings</span>
+          <h2>FIND YOUR<br>RHYTHM.</h2>
+        </div>
+        <p>
+          No partner required. Whether you’re stepping onto the hardwood for the very first time or sharpening complex Cuban Casino turns, everyone belongs here.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="filter-tabs" role="tablist">
+        <button class="filter-btn active" onclick="filterClasses('all', this)" role="tab">All Classes</button>
+        <button class="filter-btn" onclick="filterClasses('dance', this)" role="tab">Dance</button>
+        <button class="filter-btn" onclick="filterClasses('fitness', this)" role="tab">Fitness</button>
+        <button class="filter-btn" onclick="filterClasses('private', this)" role="tab">Private & Events</button>
+      </div>
+
+      <!-- Class Cards Grid -->
+      <div class="classes-grid" id="classesGrid">
+
+        <!-- Card 1: Cuban Salsa & Timba -->
+        <article class="class-card" data-category="dance">
+          <div class="class-media">
+            <img src="https://static.wixstatic.com/media/7e68de_bc6476a588894a4dba3dd79654f17d7f~mv2.jpg" alt="Cuban Salsa and Timba Class with Julie & Rafa" loading="lazy">
+            <span class="class-tag-overlay">Weekly Group</span>
+            <span class="class-price-pill">$20</span>
+          </div>
+          <div class="class-body">
+            <h3 class="class-title">Cuban Salsa & Timba</h3>
+            <div class="class-meta-list">
+              <div class="class-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Tuesday · 8:00 PM
+              </div>
+              <div class="class-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                802 Dundas St West, Toronto
+              </div>
+            </div>
+            <p class="class-desc">
+              Authentic Casino partner work, syncopated Timba body movement, footwork, and musicality. Led by Rafa & Julie. Absolute beginners to intermediate dancers welcome.
+            </p>
+            <div class="class-card-actions">
+              <button class="btn-book-class" onclick="openBookingDrawer('Cuban Salsa & Timba ($20)')">Book Class →</button>
+              <button class="btn-class-details" onclick="openBookingDrawer('Cuban Salsa & Timba ($20)')" title="More info" aria-label="Class details">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Zumba Fitness -->
+        <article class="class-card" data-category="fitness">
+          <div class="class-media">
+            <img src="https://static.wixstatic.com/media/7e68de_fa91e644f3084d24be6c6ca2a1eaa6bc~mv2.jpg" alt="Zumba Fitness Class at Mil Pasos" loading="lazy">
+            <span class="class-tag-overlay">Cardio & Rhythm</span>
+            <span class="class-price-pill">$20</span>
+          </div>
+          <div class="class-body">
+            <h3 class="class-title">Zumba Fitness</h3>
+            <div class="class-meta-list">
+              <div class="class-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Tuesday · 7:00 PM
+              </div>
+              <div class="class-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                802 Dundas St West, Toronto
+              </div>
+            </div>
+            <p class="class-desc">
+              High-voltage cardio set to infectious Latin, Afro-beat, and reggaeton rhythms. Sweat, smile, and torch energy with Julie Marouze's signature infectious vitality.
+            </p>
+            <div class="class-card-actions">
+              <button class="btn-book-class" onclick="openBookingDrawer('Zumba Fitness ($20)')">Book Class →</button>
+              <button class="btn-class-details" onclick="openBookingDrawer('Zumba Fitness ($20)')" title="More info" aria-label="Class details">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Only WomXn Salsa -->
+        <article class="class-card" data-category="dance">
+          <div class="class-media">
+            <img src="https://static.wixstatic.com/media/7e68de_fe9bdb2b09294436bafcce76bb7ed15b~mv2.jpg" alt="Only WomXn Salsa Styling with Julie" loading="lazy">
+            <span class="class-tag-overlay">Lady Styling</span>
+            <span class="class-price-pill">$20</span>
+          </div>
+          <div class="class-body">
+            <h3 class="class-title">Only WomXn Salsa</h3>
+            <div class="class-meta-list">
+              <div class="class-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Wednesday · 8:00 PM
+              </div>
+              <div class="class-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                295 Dufferin St, Toronto
+              </div>
+            </div>
+            <p class="class-desc">
+              A dedicated supportive space focused on posture, fluid arm styling, body isolation, weight transfer, and self-confidence through Cuban salsa and shines.
+            </p>
+            <div class="class-card-actions">
+              <button class="btn-book-class" onclick="openBookingDrawer('Only WomXn Salsa ($20)')">Book Class →</button>
+              <button class="btn-class-details" onclick="openBookingDrawer('Only WomXn Salsa ($20)')" title="More info" aria-label="Class details">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: Private Lessons -->
+        <article class="class-card" data-category="private">
+          <div class="class-media">
+            <img src="https://static.wixstatic.com/media/7e68de_63ec28de8b9c4549bf40336315fbc190~mv2.jpg" alt="Private Dance Coaching by Mil Pasos" loading="lazy">
+            <span class="class-tag-overlay">1-on-1 Coaching</span>
+            <span class="class-price-pill">$80/hr</span>
+          </div>
+          <div class="class-body">
+            <h3 class="class-title">Private Coaching</h3>
+            <div class="class-meta-list">
+              <div class="class-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Mon–Sat Toronto · Sun KW Region
+              </div>
+              <div class="class-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Toronto Studio or In-Home
+              </div>
+            </div>
+            <p class="class-desc">
+              Rapid progression tailored to your pace. Ideal for beginners seeking solid foundation, dancers refining lead/follow connection, or fast-track mastery.
+            </p>
+            <div class="class-card-actions">
+              <button class="btn-book-class" onclick="openBookingDrawer('Private Lessons ($80/hr)')">Inquire Coaching →</button>
+              <button class="btn-class-details" onclick="openBookingDrawer('Private Lessons ($80/hr)')" title="More info" aria-label="Class details">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5: Shows & Performances -->
+        <article class="class-card" data-category="private">
+          <div class="class-media">
+            <img src="https://static.wixstatic.com/media/7e68de_ac0b1506ae8d4d008f74ab2a472e3350~mv2.jpg" alt="Live Latin Dance Shows & Animations" loading="lazy">
+            <span class="class-tag-overlay">Entertainment</span>
+            <span class="class-price-pill">From $150</span>
+          </div>
+          <div class="class-body">
+            <h3 class="class-title">Shows & Entertainment</h3>
+            <div class="class-meta-list">
+              <div class="class-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Custom Bookings
+              </div>
+              <div class="class-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                GTA · Ontario · Quebec
+              </div>
+            </div>
+            <p class="class-desc">
+              Electrifying Cuban stage performances, corporate party animation, festivals, and wedding choreography that turns your event into an unforgettable celebration.
+            </p>
+            <div class="class-card-actions">
+              <button class="btn-book-class" onclick="openBookingDrawer('Performances & Shows (From $150)')">Book Event →</button>
+              <button class="btn-class-details" onclick="openBookingDrawer('Performances & Shows (From $150)')" title="More info" aria-label="Class details">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. PARTY / COMMUNITY MOMENT ("THIS IS MORE THAN A CLASS") -->
+  <section class="party-section" id="party">
+    <div class="party-glow party-glow-1"></div>
+    <div class="party-glow party-glow-2"></div>
+
+    <div class="container">
+      <div class="party-grid">
+        <div class="party-text-col">
+          <span class="editorial-eyebrow eyebrow-coral">Social Connection & Culture</span>
+          <h2 class="party-statement">
+            THIS IS MORE<br>
+            THAN A CLASS.
+          </h2>
+          <p class="party-desc">
+            It’s music, culture, movement, and community. The floor is warm, the bass is alive, and nobody is judging you. You leave lighter than you arrived.
+          </p>
+
+          <div class="party-pills">
+            <span class="party-pill">No Partner Needed</span>
+            <span class="party-pill">Warm Hardwood Energy</span>
+            <span class="party-pill">Toronto Social Dancing</span>
+            <span class="party-pill">Havana Rhythm</span>
+          </div>
+
+          <div>
+            <button class="btn-primary" onclick="openBookingDrawer('First Class Trial')">
+              EXPERIENCE THE FLOOR
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="party-mosaic">
+          <div class="party-mosaic-img">
+            <img src="https://static.wixstatic.com/media/7e68de_81293f0ac3e348649c6db433e3432612~mv2.jpg" alt="Mil Pasos Community Social Celebrating" loading="lazy">
+            <div class="party-img-caption">COMMUNITY SOCIAL NIGHTS</div>
+          </div>
+          <div class="party-mosaic-img">
+            <img src="https://static.wixstatic.com/media/7e68de_d5b22bfaff774120aa3755ee763a68cd~mv2.jpg" alt="Festival Dance Floor Energy with Mil Pasos" loading="lazy">
+            <div class="party-img-caption">FESTIVAL ENERGY · LIVE IN TORONTO</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. JULIE + RAFA (THE PEOPLE BEHIND THE RHYTHM) -->
+  <section class="duo-section" id="people">
+    <div class="container">
+      <div class="duo-layout">
+        <div class="duo-visual-frame">
+          <img src="https://static.wixstatic.com/media/7e68de_c1c9b8c79a1f47c6bd5b6e32b7122ba2~mv2.jpg" alt="Julie Marouze and Rafa Yowbrea, Founders of Mil Pasos Studio" loading="lazy">
+          <div class="duo-overlay-badge">
+            <strong>JULIE & RAFA</strong>
+            <span>Founders & Directors · Mil Pasos</span>
+          </div>
+        </div>
+
+        <div class="duo-content">
+          <span class="editorial-eyebrow eyebrow-dark">The Heart of Mil Pasos</span>
+          <h2>JULIE + RAFA</h2>
+          <p class="duo-lead">
+            A Franco-Cuban dynamic duo uniting authentic Havana roots with Parisian performance discipline.
+          </p>
+
+          <div class="bio-toggle-group" role="tablist">
+            <button class="bio-toggle-btn active" onclick="switchBio('story', this)" role="tab">The Story</button>
+            <button class="bio-toggle-btn" onclick="switchBio('julie', this)" role="tab">Meet Julie</button>
+            <button class="bio-toggle-btn" onclick="switchBio('rafa', this)" role="tab">Meet Rafa</button>
+          </div>
+
+          <div class="bio-pane active" id="bio-story">
+            <p>
+              Mil Pasos was born out of a shared obsession with rhythm, human movement, and genuine community. Julie brought her background in European dance pedagogy, event animation, and fitness. Rafa brought the living heartbeat of Cuban street culture, Capoeira, and Casino. Together in Toronto, they’ve created a studio where anyone—from total beginners to seasoned performers—can discover authentic Latin movement without pretension.
+            </p>
+          </div>
+
+          <div class="bio-pane" id="bio-julie">
+            <p>
+              Born in France, Julie began dancing at age 5 in Paris, training in ballet, modern jazz, hip hop, African dance, and salsa. She holds a European diploma in Animation & Event Management and is a certified trainer.
+            </p>
+            <ul>
+              <li>Selected dancer for <strong>Madonna’s "Addicted to Sweat"</strong> cardio dance concept at Hard Candy Toronto.</li>
+              <li>Performed live on stage with Madonna in 2014.</li>
+              <li>Spearheads Mil Pasos’ Zumba, Latin fusion, and Only WomXn styling programs.</li>
+            </ul>
+          </div>
+
+          <div class="bio-pane" id="bio-rafa">
+            <p>
+              Born and raised in Cuba, Rafa’s dance was forged in the streets, social circles, and musical culture of the island.
+            </p>
+            <ul>
+              <li>Specialist in authentic <strong>Cuban Salsa (Casino) & Timba</strong>, with rich foundation in Afro-Cuban movement.</li>
+              <li>Trained in Capoeira and urban movement, bringing unmatched agility, rhythm, and stage presence.</li>
+              <li>Renowned for infectious energy, playful partner lead technique, and making every student feel at home.</li>
+            </ul>
+          </div>
+
+          <div style="margin-top: 2rem;">
+            <a href="mailto:milpasosstudio@gmail.com?subject=Private%20Coaching%20with%20Julie%20and%20Rafa" class="btn-primary" style="background: var(--text-dark); color: #fff;">
+              TRAIN WITH JULIE & RAFA
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. PERFORMANCE REEL (HORIZONTAL FILMSTRIP) -->
+  <section class="reel-section" id="reel">
+    <div class="container reel-header-wrap">
+      <div class="section-header-row" style="margin-bottom: 0;">
+        <div>
+          <span class="editorial-eyebrow eyebrow-coral">Archive & Footage</span>
+          <h2 class="section-title">PERFORMANCE<br>REEL</h2>
+        </div>
+        <p class="section-lead">
+          Drag or swipe horizontally through live stages, workshops, and festival showcases across Ontario and Quebec.
+        </p>
+      </div>
+    </div>
+
+    <div class="reel-track-wrapper" id="reelTrack">
+      <div class="reel-track">
+        <!-- Reel Item 1 -->
+        <div class="reel-item" onclick="openCinemaModal('featured')">
+          <img src="https://static.wixstatic.com/media/7e68de_4c7090e44beb48f6b610798eb54814c4~mv2.jpg" alt="Flying Dance Festival Latin Fusion Routine by Julie & Rafael" loading="lazy">
+          <div class="reel-item-overlay">
+            <span class="reel-pill">FESTIVAL REEL</span>
+            <div class="reel-meta">
+              <h4>Flying Dance Festival</h4>
+              <p>Latin Fusion Routine by Julie & Rafael</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reel Item 2 -->
+        <div class="reel-item" onclick="openCinemaModal('rueda')">
+          <img src="https://static.wixstatic.com/media/7e68de_aac1c6db7e934527ba97cdeb02123a9c~mv2.jpg" alt="Rueda de Casino Mil Pasos Toronto" loading="lazy">
+          <div class="reel-item-overlay">
+            <span class="reel-pill">RUEDA DE CASINO</span>
+            <div class="reel-meta">
+              <h4>Synchronized Casino</h4>
+              <p>Mil Pasos Toronto Community Circle</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reel Item 3 -->
+        <div class="reel-item" onclick="openCinemaModal('zumba')">
+          <img src="https://static.wixstatic.com/media/7e68de_fa91e644f3084d24be6c6ca2a1eaa6bc~mv2.jpg" alt="Zumba Sweat Session with Julie" loading="lazy">
+          <div class="reel-item-overlay">
+            <span class="reel-pill">CARDIO POWER</span>
+            <div class="reel-meta">
+              <h4>Sweat & Sweet</h4>
+              <p>High Intensity Studio Session with Julie</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reel Item 4 -->
+        <div class="reel-item" onclick="openCinemaModal('stage-show')">
+          <img src="https://static.wixstatic.com/media/7e68de_903f6bd12bc44e12ade965d8d1e63cff~mv2.jpg" alt="Live Event Entertainment with Mil Pasos" loading="lazy">
+          <div class="reel-item-overlay">
+            <span class="reel-pill">SHOWCASE</span>
+            <div class="reel-meta">
+              <h4>Stage & Entertainment</h4>
+              <p>Live Corporate & Cultural Events</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reel Item 5 -->
+        <div class="reel-item" onclick="openCinemaModal('womxn')">
+          <img src="https://static.wixstatic.com/media/7e68de_aba9fd5bddeb470283b5afed8fb5c332f000.jpg" alt="Only WomXn Lady Styling Workshop" loading="lazy">
+          <div class="reel-item-overlay">
+            <span class="reel-pill">LADY STYLING</span>
+            <div class="reel-meta">
+              <h4>Only WomXn Intensive</h4>
+              <p>Body Isolation & Musicality Workshop</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reel Item 6 -->
+        <div class="reel-item" onclick="openCinemaModal('featured')">
+          <img src="https://static.wixstatic.com/media/7e68de_659f8473f4134151b031a72d89ac67b1~mv2.jpg" alt="Mil Pasos Stage Duet" loading="lazy">
+          <div class="reel-item-overlay">
+            <span class="reel-pill">STAGE CONNECTION</span>
+            <div class="reel-meta">
+              <h4>Festival Stage Showcase</h4>
+              <p>Live Partner Connection & Agility</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. PRIVATE LESSONS / WEDDINGS / EVENTS -->
+  <section class="bespoke-section" id="bespoke">
+    <div class="container">
+      <span class="editorial-eyebrow eyebrow-coral">Custom Experiences</span>
+      <h2 class="section-title">PRIVATE COACHING<br>& CELEBRATIONS</h2>
+
+      <div class="bespoke-grid">
+        <!-- Private 1-on-1 -->
+        <div class="bespoke-card">
+          <div class="bespoke-media">
+            <img src="https://static.wixstatic.com/media/7e68de_63ec28de8b9c4549bf40336315fbc190~mv2.jpg" alt="Private Dance Coaching with Mil Pasos" loading="lazy">
+            <span class="bespoke-price-badge">$80 / HOUR</span>
+          </div>
+          <div class="bespoke-body">
+            <h3 class="bespoke-title">PRIVATE COACHING</h3>
+            <p class="bespoke-desc">
+              Accelerate your dance journey with personalized 1-on-1 feedback. Available in Toronto Monday through Saturday, with select Sunday availability in the Kitchener-Waterloo region.
+            </p>
+            <button class="btn-bespoke-cta" onclick="openBookingDrawer('Private Lessons ($80/hr)')">Reserve Coaching Slot</button>
+          </div>
+        </div>
+
+        <!-- Wedding First Dance -->
+        <div class="bespoke-card">
+          <div class="bespoke-media">
+            <img src="https://static.wixstatic.com/media/7e68de_bc6476a588894a4dba3dd79654f17d7f~mv2.jpg" alt="Wedding Dance Choreography by Julie and Rafa" loading="lazy">
+            <span class="bespoke-price-badge">BESPOKE PACKAGES</span>
+          </div>
+          <div class="bespoke-body">
+            <h3 class="bespoke-title">WEDDING DANCE</h3>
+            <p class="bespoke-desc">
+              Forget stiff, awkward high-school dances. Julie and Rafa build natural, joyful, custom routines that fit your song and make you feel confident on your big day.
+            </p>
+            <button class="btn-bespoke-cta" onclick="openBookingDrawer('Wedding Choreography')">Inquire Wedding Dance</button>
+          </div>
+        </div>
+
+        <!-- Shows & Live Animation -->
+        <div class="bespoke-card">
+          <div class="bespoke-media">
+            <img src="https://static.wixstatic.com/media/7e68de_ac0b1506ae8d4d008f74ab2a472e3350~mv2.jpg" alt="Live Latin Shows and Event Animation" loading="lazy">
+            <span class="bespoke-price-badge">STARTING $150</span>
+          </div>
+          <div class="bespoke-body">
+            <h3 class="bespoke-title">SHOWS & ANIMATION</h3>
+            <p class="bespoke-desc">
+              Bring dynamic Cuban rhythms, show choreography, and crowd animations to your festival, corporate gala, or private celebration across the GTA, Ontario, and Quebec.
+            </p>
+            <button class="btn-bespoke-cta" onclick="openBookingDrawer('Shows & Events (From $150)')">Request Performance Quote</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. GET INSPIRED (EDITORIAL COLLAGE) -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header-row">
+        <div>
+          <span class="editorial-eyebrow eyebrow-dark">Visual Culture</span>
+          <h2 class="section-title" style="color: var(--text-dark);">GET INSPIRED.</h2>
+        </div>
+        <p class="section-lead" style="color: var(--text-dark-muted);">
+          Moments captured from the studio floor, festivals, and Toronto dance halls. Tap any frame to enlarge.
+        </p>
+      </div>
+
+      <div class="gallery-masonry">
+        <div class="gallery-item tall" onclick="openCinemaModal('featured')">
+          <img src="https://static.wixstatic.com/media/7e68de_4c7090e44beb48f6b610798eb54814c4~mv2.jpg" alt="Julie and Rafa Stage Performance" loading="lazy">
+          <div class="gallery-item-overlay"><span>STAGE DUO IN ACTION</span></div>
+        </div>
+        <div class="gallery-item" onclick="openCinemaModal('womxn')">
+          <img src="https://static.wixstatic.com/media/7e68de_fe9bdb2b09294436bafcce76bb7ed15b~mv2.jpg" alt="Julie Marouze Dance Expression" loading="lazy">
+          <div class="gallery-item-overlay"><span>EXPRESSION & POWER</span></div>
+        </div>
+        <div class="gallery-item wide" onclick="openCinemaModal('featured')">
+          <img src="https://static.wixstatic.com/media/7e68de_8822678d1d164dbeaf6e9a63661ee8b1~mv2.jpg" alt="Cuban Partner Connection" loading="lazy">
+          <div class="gallery-item-overlay"><span>CUBAN SALSA CONNECTION</span></div>
+        </div>
+        <div class="gallery-item" onclick="openCinemaModal('featured')">
+          <img src="https://static.wixstatic.com/media/7e68de_c624ef3eb4de4d7dad2eaec08333cc2a~mv2.jpg" alt="Rafa Latin Movement & Agility" loading="lazy">
+          <div class="gallery-item-overlay"><span>AGILITY & FOOTWORK</span></div>
+        </div>
+        <div class="gallery-item tall" onclick="openCinemaModal('featured')">
+          <img src="https://static.wixstatic.com/media/7e68de_3355710093d147209f3de59150667411~mv2.jpg" alt="Dynamic Spin on Hardwood Floor" loading="lazy">
+          <div class="gallery-item-overlay"><span>SPIN & MOMENTUM</span></div>
+        </div>
+        <div class="gallery-item" onclick="openCinemaModal('rueda')">
+          <img src="https://static.wixstatic.com/media/7e68de_81293f0ac3e348649c6db433e3432612~mv2.jpg" alt="Mil Pasos Dance Community Family" loading="lazy">
+          <div class="gallery-item-overlay"><span>MIL PASOS FAMILY</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. WHERE WE DANCE (LOCATIONS) -->
+  <section class="locations-section" id="locations">
+    <div class="container">
+      <span class="editorial-eyebrow eyebrow-coral">Studio Footprint</span>
+      <h2 class="section-title">WHERE WE DANCE.</h2>
+
+      <div class="locations-grid">
+        <!-- Location 1 -->
+        <div class="location-card">
+          <div>
+            <span class="loc-tag">TUESDAY SESSIONS</span>
+            <h3>802 Dundas St West</h3>
+            <p>
+              Downtown West, Toronto.<br>
+              Home to Tuesday Zumba (7 PM) and Cuban Salsa & Timba (8 PM). Close to Trinity Bellwoods.
+            </p>
+          </div>
+          <a href="https://maps.google.com/?q=802+Dundas+St+West+Toronto" target="_blank" rel="noopener noreferrer" class="loc-link">
+            Get Directions
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+          </a>
+        </div>
+
+        <!-- Location 2 -->
+        <div class="location-card">
+          <div>
+            <span class="loc-tag">WEDNESDAY SESSIONS</span>
+            <h3>295 Dufferin St</h3>
+            <p>
+              Parkdale / Liberty Village, Toronto.<br>
+              Host to our Wednesday Only WomXn Salsa Class (8 PM). Spacious sprung wooden floors.
+            </p>
+          </div>
+          <a href="https://maps.google.com/?q=295+Dufferin+St+Toronto" target="_blank" rel="noopener noreferrer" class="loc-link">
+            Get Directions
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+          </a>
+        </div>
+
+        <!-- Location 3 -->
+        <div class="location-card">
+          <div>
+            <span class="loc-tag">REGIONAL & PRIVATE</span>
+            <h3>Kitchener-Waterloo Region</h3>
+            <p>
+              Select Sunday coaching availability, intensive workshops, and special community dance sessions in KW.
+            </p>
+          </div>
+          <a href="mailto:milpasosstudio@gmail.com?subject=KW%20Sunday%20Classes" class="loc-link">
+            Inquire KW Schedule
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Location 4 -->
+        <div class="location-card">
+          <div>
+            <span class="loc-tag">TOURING & EVENTS</span>
+            <h3>GTA · Ontario · Quebec</h3>
+            <p>
+              Available for festivals, congresses, private functions, and stage performances across eastern Canada.
+            </p>
+          </div>
+          <a href="tel:+16472864209" class="loc-link">
+            Call 647-286-4209
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FINAL CINEMATIC CTA -->
+  <section class="final-cta-section" id="cta">
+    <div class="cta-backdrop">
+      <img src="https://static.wixstatic.com/media/7e68de_580356972b934176a4600bdb61c12200~mv2.jpg" alt="Mil Pasos Studio Room Atmosphere" loading="lazy">
+    </div>
+    <div class="cta-gradient-overlay"></div>
+
+    <div class="cta-inner">
+      <span class="editorial-eyebrow eyebrow-coral">Step Into The Room</span>
+      <h2 class="cta-title">
+        YOUR FIRST STEP<br>
+        STARTS HERE.
+      </h2>
+      <p class="cta-sub">
+        You don't need years of training or a dance partner. You just need to show up, feel the wood under your feet, and let the rhythm take over.
+      </p>
+
+      <div class="cta-actions">
+        <button class="btn-primary" onclick="openBookingDrawer('Tuesday Class ($20)')">
+          FIND YOUR CLASS
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <a href="mailto:milpasosstudio@gmail.com" class="btn-secondary">
+          CONTACT MIL PASOS
+        </a>
+      </div>
+
+      <div class="direct-contacts">
+        <a href="tel:+16472864209">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          647-286-4209
+        </a>
+        <a href="mailto:milpasosstudio@gmail.com">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          milpasosstudio@gmail.com
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.85rem;">
+          <img src="https://static.wixstatic.com/media/7e68de_3771eab350aa4065ab1f1c5e8ae47f4a~mv2.png" alt="Mil Pasos Studio Logo" style="height: 48px; width: auto; object-fit: contain;">
+          <h4 style="margin: 0;">MIL PASOS STUDIO</h4>
+        </div>
+        <p>
+          Authentic Cuban Salsa, Timba, Zumba, and dance fitness in Toronto. Founded and directed by Julie Marouze & Rafa Yowbrea.
+        </p>
+        <p style="color: var(--amber); font-weight: 600;">
+          Office Hours: Mon–Fri 10:00am–9:30pm · Sat–Sun 11:00am–5:00pm
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Programs</h5>
+        <ul>
+          <li><a href="#classes">Cuban Salsa & Timba ($20)</a></li>
+          <li><a href="#classes">Zumba Fitness ($20)</a></li>
+          <li><a href="#classes">Only WomXn Salsa ($20)</a></li>
+          <li><a href="#bespoke">Private Lessons ($80/hr)</a></li>
+          <li><a href="#bespoke">Wedding Dances</a></li>
+          <li><a href="#bespoke">Shows & Performances</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Studios</h5>
+        <ul>
+          <li><a href="#locations">802 Dundas St West, Toronto</a></li>
+          <li><a href="#locations">295 Dufferin St, Toronto</a></li>
+          <li><a href="#locations">Kitchener-Waterloo (Sundays)</a></li>
+          <li><a href="#locations">GTA / Ontario / Quebec</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="tel:+16472864209">Call: 647-286-4209</a></li>
+          <li><a href="mailto:milpasosstudio@gmail.com">milpasosstudio@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram (@milpasosstudio)</a></li>
+          <li><a href="https://www.youtube.com/@milpasosdancefitness3299" target="_blank" rel="noopener noreferrer">YouTube Channel</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook Community</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Mil Pasos Studio Toronto. All rights reserved.</div>
+      <div>Designed with rhythm, cinematography & respect for the dance floor.</div>
+    </div>
+  </footer>
+
+  <!-- CINEMA VIDEO LIGHTBOX MODAL -->
+  <div class="cinema-modal" id="cinemaModal" role="dialog" aria-modal="true" aria-label="Performance Video Player">
+    <div class="modal-frame">
+      <button class="modal-close-btn" onclick="closeCinemaModal()" aria-label="Close Video Player">&times;</button>
+      <div class="modal-video-container">
+        <!-- Dynamic video player / fallback stream -->
+        <iframe id="cinemaIframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOKING & CLASS PASS DRAWER -->
+  <div class="booking-drawer-overlay" id="bookingOverlay" onclick="closeBookingDrawer()"></div>
+  <aside class="booking-drawer" id="bookingDrawer" role="dialog" aria-modal="true" aria-label="Book a Class">
+    <div class="drawer-header">
+      <div>
+        <span class="editorial-eyebrow eyebrow-coral" style="margin-bottom:0.2rem;">Quick Reserve</span>
+        <h3 id="drawerClassTitle">RESERVE A SPOT</h3>
+      </div>
+      <button class="drawer-close-btn" onclick="closeBookingDrawer()" aria-label="Close drawer">&times;</button>
+    </div>
+
+    <p style="color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1.5rem;">
+      Select your class or coaching option. No partner is required. Pay in person ($20 cash or Interac e-transfer to <strong>milpasosstudio@gmail.com</strong>).
+    </p>
+
+    <div class="booking-option-card selected" onclick="selectDrawerOption(this, 'Cuban Salsa & Timba ($20)')">
+      <div class="booking-opt-title">
+        <span>Cuban Salsa & Timba</span>
+        <span class="opt-price">$20</span>
+      </div>
+      <div class="booking-opt-meta">Tuesday · 8:00 PM · 802 Dundas St W</div>
+    </div>
+
+    <div class="booking-option-card" onclick="selectDrawerOption(this, 'Zumba Fitness ($20)')">
+      <div class="booking-opt-title">
+        <span>Zumba Fitness</span>
+        <span class="opt-price">$20</span>
+      </div>
+      <div class="booking-opt-meta">Tuesday · 7:00 PM · 802 Dundas St W</div>
+    </div>
+
+    <div class="booking-option-card" onclick="selectDrawerOption(this, 'Only WomXn Salsa ($20)')">
+      <div class="booking-opt-title">
+        <span>Only WomXn Salsa</span>
+        <span class="opt-price">$20</span>
+      </div>
+      <div class="booking-opt-meta">Wednesday · 8:00 PM · 295 Dufferin St</div>
+    </div>
+
+    <div class="booking-option-card" onclick="selectDrawerOption(this, 'Private Lessons ($80/hr)')">
+      <div class="booking-opt-title">
+        <span>Private Lessons</span>
+        <span class="opt-price">$80/hr</span>
+      </div>
+      <div class="booking-opt-meta">Toronto Mon–Sat · KW Sundays</div>
+    </div>
+
+    <div class="drawer-notice">
+      <strong>✨ What to bring:</strong> Comfortable clothing and clean indoor shoes (sneakers, dance flats, or dance heels). Water fountain available on site.
+    </div>
+
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.75rem;">
+      <a id="drawerEmailLink" href="mailto:milpasosstudio@gmail.com?subject=Booking%20Cuban%20Salsa%20Class&body=Hi%20Julie%20and%20Rafa,%20I'd%20like%20to%20reserve%20a%20spot%20in%20an%20upcoming%20class!" class="btn-primary" style="text-align: center; justify-content: center;">
+        CONFIRM VIA EMAIL
+      </a>
+      <a href="tel:+16472864209" class="btn-secondary" style="text-align: center; justify-content: center;">
+        OR CALL 647-286-4209
+      </a>
+    </div>
+  </aside>
+
+  <!-- JAVASCRIPT: INTERACTIONS, WEB AUDIO RHYTHM, CINEMA MODAL & FILTERING -->
+  <script>
+    // 1. HEADER SCROLL STATE
+    const siteHeader = document.getElementById('siteHeader');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        siteHeader.classList.add('scrolled');
+      } else {
+        siteHeader.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+    // 2. CUBAN SON CLAVE & CONGA WEB AUDIO SYNTHESIZER
+    // Generates an authentic 2-3 son clave and conga pulse so visitors can literally "hear the room"
+    let audioCtx = null;
+    let isClavePlaying = false;
+    let claveTimer = null;
+    let claveBeat = 0;
+
+    const claveToggleBtn = document.getElementById('claveAudioBtn');
+    const claveBtnText = document.getElementById('claveBtnText');
+
+    function initAudio() {
+      if (!audioCtx) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AudioContext();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+    }
+
+    function playWoodblock(pitch, decay, gainVal) {
+      if (!audioCtx) return;
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(pitch, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(pitch * 0.5, audioCtx.currentTime + decay);
+      
+      gain.gain.setValueAtTime(gainVal, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + decay);
+      
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      
+      osc.start();
+      osc.stop(audioCtx.currentTime + decay);
+    }
+
+    // 2-3 Son Clave pattern over 16 sixteenth steps
+    // Steps with hits: 2, 6 (the 2 side) | 10, 13, 16 (the 3 side)
+    const clavePattern = [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1];
+
+    function stepRhythm() {
+      if (!isClavePlaying) return;
+      
+      // Clave pulse
+      if (clavePattern[claveBeat % 16] === 1) {
+        playWoodblock(1400, 0.07, 0.25);
+      }
+      // Subtle conga low tumbao pulse on step 4 and 12
+      if (claveBeat % 8 === 4) {
+        playWoodblock(220, 0.16, 0.18);
+      }
+
+      claveBeat = (claveBeat + 1) % 16;
+    }
+
+    claveToggleBtn.addEventListener('click', () => {
+      initAudio();
+      if (!isClavePlaying) {
+        isClavePlaying = true;
+        claveToggleBtn.classList.add('playing');
+        claveBtnText.textContent = 'RHYTHM ON';
+        claveBeat = 0;
+        // ~120 BPM => 16th note is 125ms
+        claveTimer = setInterval(stepRhythm, 125);
+      } else {
+        isClavePlaying = false;
+        claveToggleBtn.classList.remove('playing');
+        claveBtnText.textContent = 'HEAR THE ROOM';
+        clearInterval(claveTimer);
+      }
+    });
+
+    // 3. CLASS CARDS STAGGERED ENTRANCE OBSERVER
+    const classCards = document.querySelectorAll('.class-card');
+    if ('IntersectionObserver' in window) {
+      const cardObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        root: null,
+        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.12
+      });
+
+      classCards.forEach(card => cardObserver.observe(card));
+    } else {
+      classCards.forEach(card => card.classList.add('in-view'));
+    }
+
+    // 4. CLASS FILTERING WITH STAGGERED TRANSITION
+    function filterClasses(category, btnElement) {
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      btnElement.classList.add('active');
+
+      const cards = document.querySelectorAll('.class-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (category === 'all' || cat === category) {
+          card.style.display = 'flex';
+          card.classList.remove('in-view');
+          const delay = visibleCount * 90 + 20;
+          setTimeout(() => {
+            card.classList.add('in-view');
+          }, delay);
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // 5. JULIE & RAFA BIO SWITCHER
+    function switchBio(tabId, btnElement) {
+      document.querySelectorAll('.bio-toggle-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.bio-pane').forEach(pane => pane.classList.remove('active'));
+      
+      btnElement.classList.add('active');
+      const targetPane = document.getElementById('bio-' + tabId);
+      if (targetPane) {
+        targetPane.classList.add('active');
+      }
+    }
+
+    // 6. CINEMA VIDEO MODAL WITH VERIFIED MIL PASOS YOUTUBE FOOTAGE
+    const cinemaModal = document.getElementById('cinemaModal');
+    const cinemaIframe = document.getElementById('cinemaIframe');
+
+    const videoUrls = {
+      'featured': 'https://www.youtube-nocookie.com/embed/3T_CuKfrRjI',
+      'zumba': 'https://www.youtube-nocookie.com/embed/kH1ID49-Du0',
+      'womxn': 'https://www.youtube-nocookie.com/embed/-_VAq7jd4HY',
+      'timba-suelta': 'https://www.youtube-nocookie.com/embed/YYW2e6BvmKM',
+      'rueda': 'https://www.youtube-nocookie.com/embed/KoXsexAQz30',
+      'zumba-party': 'https://www.youtube-nocookie.com/embed/kH1ID49-Du0',
+      'stage-show': 'https://www.youtube-nocookie.com/embed/3T_CuKfrRjI',
+      'womxn-reel': 'https://www.youtube-nocookie.com/embed/-_VAq7jd4HY'
+    };
+
+    function openCinemaModal(videoKey) {
+      const url = videoUrls[videoKey] || 'https://www.youtube-nocookie.com/embed/3T_CuKfrRjI';
+      cinemaIframe.src = url + '?autoplay=1&rel=0&modestbranding=1';
+      cinemaModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCinemaModal() {
+      cinemaModal.classList.remove('active');
+      cinemaIframe.src = '';
+      document.body.style.overflow = '';
+    }
+
+    cinemaModal.addEventListener('click', (e) => {
+      if (e.target === cinemaModal) {
+        closeCinemaModal();
+      }
+    });
+
+    // 6. BOOKING DRAWER
+    const bookingOverlay = document.getElementById('bookingOverlay');
+    const bookingDrawer = document.getElementById('bookingDrawer');
+    const drawerClassTitle = document.getElementById('drawerClassTitle');
+    const drawerEmailLink = document.getElementById('drawerEmailLink');
+
+    function openBookingDrawer(className) {
+      if (className) {
+        drawerClassTitle.textContent = className.toUpperCase();
+        drawerEmailLink.href = `mailto:milpasosstudio@gmail.com?subject=Booking%20${encodeURIComponent(className)}&body=Hi%20Julie%20and%20Rafa,%0D%0A%0D%0AI'd%20like%20to%20reserve%20a%20spot%20in%20${encodeURIComponent(className)}.%20Please%20confirm%20my%20spot!`;
+      }
+      bookingOverlay.classList.add('active');
+      bookingDrawer.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeBookingDrawer() {
+      bookingOverlay.classList.remove('active');
+      bookingDrawer.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function selectDrawerOption(cardElement, optionTitle) {
+      document.querySelectorAll('.booking-option-card').forEach(c => c.classList.remove('selected'));
+      cardElement.classList.add('selected');
+      drawerClassTitle.textContent = optionTitle.toUpperCase();
+      drawerEmailLink.href = `mailto:milpasosstudio@gmail.com?subject=Booking%20${encodeURIComponent(optionTitle)}&body=Hi%20Julie%20and%20Rafa,%0D%0A%0D%0AI'd%20like%20to%20reserve%20a%20spot%20in%20${encodeURIComponent(optionTitle)}.%20Please%20confirm%20my%20spot!`;
+    }
+
+    // 7. KEYBOARD NAVIGATION & ACCESSIBILITY
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeCinemaModal();
+        closeBookingDrawer();
+      }
+    });
+
+    // 8. HORIZONTAL DRAG SCROLL FOR PERFORMANCE REEL
+    const reelTrackWrapper = document.getElementById('reelTrack');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    reelTrackWrapper.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - reelTrackWrapper.offsetLeft;
+      scrollLeft = reelTrackWrapper.scrollLeft;
+      reelTrackWrapper.style.cursor = 'grabbing';
+    });
+    reelTrackWrapper.addEventListener('mouseleave', () => {
+      isDown = false;
+      reelTrackWrapper.style.cursor = 'grab';
+    });
+    reelTrackWrapper.addEventListener('mouseup', () => {
+      isDown = false;
+      reelTrackWrapper.style.cursor = 'grab';
+    });
+    reelTrackWrapper.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - reelTrackWrapper.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      reelTrackWrapper.scrollLeft = scrollLeft - walk;
+    });
+
+    // Mobile nav smooth scroll helper
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+      openBookingDrawer('Class Schedule');
+    });
+  </script>
+</body>
+</html>
