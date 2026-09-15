@@ -54,12 +54,18 @@
       font-family: var(--font-sans);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
     }
 
     body {
       overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
       background-color: var(--night);
       line-height: 1.6;
+      position: relative;
     }
 
     /* TYPOGRAPHY HELPERS */
@@ -69,18 +75,23 @@
       letter-spacing: -0.02em;
       line-height: 0.95;
       font-weight: 800;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
 
     .editorial-eyebrow {
       font-family: var(--font-sans);
       font-size: 0.8125rem;
       font-weight: 600;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       display: inline-flex;
+      flex-wrap: wrap;
       align-items: center;
       gap: 0.5rem;
       margin-bottom: 0.75rem;
+      max-width: 100%;
+      word-break: break-word;
     }
     .eyebrow-coral { color: var(--coral); }
     .eyebrow-amber { color: var(--amber); }
@@ -1906,7 +1917,240 @@
       color: var(--amber);
     }
 
-    /* SECTION 10: FINAL CINEMATIC CTA */
+    /* SECTION 10: FREQUENTLY ASKED QUESTIONS (FAQ) */
+    section.faq-section {
+      background-color: #0c0b10;
+      padding: 6.5rem 2rem;
+      border-top: 1px solid var(--border-dark);
+      position: relative;
+    }
+    .faq-container {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+    .faq-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .faq-filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.25rem;
+    }
+    .faq-filter-btn {
+      padding: 0.55rem 1.15rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-dark);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-muted);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .faq-filter-btn:hover {
+      background: rgba(255, 255, 255, 0.09);
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .faq-filter-btn.active {
+      background: var(--coral);
+      color: #fff;
+      border-color: var(--coral);
+      box-shadow: 0 4px 14px rgba(255, 73, 44, 0.35);
+    }
+    .faq-filter-btn .faq-count-chip {
+      font-size: 0.6875rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.15);
+    }
+    .faq-accordion-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .faq-item {
+      background: var(--card-dark);
+      border: 1px solid var(--border-dark);
+      border-radius: 14px;
+      transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+      overflow: hidden;
+    }
+    .faq-item:hover {
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+    .faq-item[open] {
+      background: #16141c;
+      border-color: rgba(255, 73, 44, 0.45);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+    .faq-summary {
+      list-style: none;
+      padding: 1.35rem 1.65rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      gap: 1.25rem;
+      transition: background 0.2s;
+    }
+    .faq-summary::-webkit-details-marker {
+      display: none;
+    }
+    .faq-summary:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .faq-q-left {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      flex: 1;
+    }
+    .faq-category-badge {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-muted);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .faq-item[open] .faq-category-badge {
+      background: rgba(255, 73, 44, 0.15);
+      color: var(--coral);
+      border-color: rgba(255, 73, 44, 0.3);
+    }
+    .faq-question {
+      font-family: var(--font-display);
+      font-size: 1.22rem;
+      letter-spacing: 0.02em;
+      color: #fff;
+      margin: 0;
+      line-height: 1.35;
+    }
+    .faq-chevron {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      flex-shrink: 0;
+      transition: transform 0.3s ease, background 0.25s, color 0.25s, border-color 0.25s;
+    }
+    .faq-item[open] .faq-chevron {
+      transform: rotate(180deg);
+      background: var(--coral);
+      color: #fff;
+      border-color: var(--coral);
+    }
+    .faq-answer-content {
+      padding: 0 1.65rem 1.65rem;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 1.25rem;
+      animation: faqFadeIn 0.28s ease-out;
+    }
+    @keyframes faqFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-5px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .faq-answer-content p {
+      margin-bottom: 0.85rem;
+    }
+    .faq-answer-content p:last-child {
+      margin-bottom: 0;
+    }
+    .faq-answer-content ul {
+      margin: 0.75rem 0 0.85rem 1.25rem;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .faq-answer-content li {
+      color: rgba(255, 255, 255, 0.82);
+    }
+    .faq-answer-content strong {
+      color: #fff;
+      font-weight: 600;
+    }
+    .faq-card-detail-block {
+      background: rgba(0, 0, 0, 0.32);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 1rem 1.15rem;
+      margin-top: 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .faq-card-detail-block .detail-title {
+      color: var(--coral);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+    }
+    .faq-card-detail-block .detail-body {
+      font-size: 0.8125rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.55;
+    }
+    .faq-support-card {
+      margin-top: 3.5rem;
+      background: linear-gradient(135deg, rgba(255, 73, 44, 0.09) 0%, rgba(20, 18, 25, 0.9) 100%);
+      border: 1px solid rgba(255, 73, 44, 0.28);
+      border-radius: 16px;
+      padding: 2.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .faq-support-text h4 {
+      font-size: 1.35rem;
+      color: #fff;
+      margin-bottom: 0.35rem;
+    }
+    .faq-support-text p {
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+      margin: 0;
+    }
+    .faq-support-actions {
+      display: flex;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    /* SECTION 11: FINAL CINEMATIC CTA */
     section.final-cta-section {
       position: relative;
       padding: 8.5rem 2rem;
@@ -2347,33 +2591,28 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.25rem;
+      gap: 0.35rem;
       margin-bottom: 1.5rem;
     }
     .mobile-nav-link-item a {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 0.75rem 0.9rem;
-      color: #FFFFFF;
+      padding: 0.75rem 1rem;
+      color: rgba(255, 255, 255, 0.92);
       text-decoration: none;
       font-family: var(--font-display);
-      font-size: 1.05rem;
-      letter-spacing: 0.02em;
+      font-size: 1.2rem;
+      letter-spacing: 0.04em;
       border-radius: 8px;
       transition: all 0.2s ease;
+      border-left: 2px solid transparent;
     }
-    .mobile-nav-link-item a:hover, .mobile-nav-link-item a:active {
+    .mobile-nav-link-item a:hover,
+    .mobile-nav-link-item a:active {
       background: rgba(255, 255, 255, 0.08);
-      color: var(--amber);
-      transform: translateX(4px);
-    }
-    .mobile-nav-badge {
-      font-family: var(--font-sans);
-      font-size: 0.7rem;
-      font-weight: 700;
       color: var(--coral);
-      letter-spacing: 0.08em;
+      border-left-color: var(--coral);
+      padding-left: 1.25rem;
     }
     .mobile-nav-ctas {
       margin-top: auto;
@@ -2682,25 +2921,44 @@
       section.duo-section,
       section.bespoke-section,
       section.gallery-section,
-      section.locations-section {
+      section.locations-section,
+      section.faq-section {
         padding: 4.25rem 1.25rem;
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
       }
       section.reel-section {
         padding: 4.25rem 0;
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
       }
       section.final-cta-section {
         padding: 4.75rem 1.25rem;
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
       }
       footer.site-footer {
         padding: 3.5rem 1.25rem 2.5rem;
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
       }
 
       .container {
         width: 100%;
         max-width: 100%;
+        min-width: 0;
       }
 
       /* Headings & Section Lead Spacing */
+      .editorial-eyebrow {
+        font-size: clamp(0.7rem, 2.8vw, 0.78rem);
+        letter-spacing: 0.12em;
+        line-height: 1.35;
+      }
       .section-header-row,
       .classes-header-row,
       .schedule-intro-row,
@@ -2709,6 +2967,8 @@
         align-items: flex-start;
         gap: 1rem;
         margin-bottom: 2rem;
+        width: 100%;
+        max-width: 100%;
       }
       .section-title,
       .classes-header-row h2,
@@ -2717,6 +2977,8 @@
       .cta-title {
         font-size: clamp(2.25rem, 8.8vw, 3.4rem);
         line-height: 0.98;
+        word-break: break-word;
+        overflow-wrap: break-word;
       }
       .section-lead,
       .classes-header-row p,
@@ -2838,42 +3100,82 @@
         font-size: 0.78rem;
       }
 
+      /* Filter Tabs: Touch-Friendly Smooth Swiping with Zero Cut-off */
+      .filter-tabs {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding: 0.25rem 0.25rem 0.65rem;
+        margin-left: -0.25rem;
+        margin-right: -0.25rem;
+        width: calc(100% + 0.5rem);
+        max-width: calc(100% + 0.5rem);
+      }
+      .filter-tabs::-webkit-scrollbar {
+        display: none;
+      }
+      .filter-btn {
+        flex-shrink: 0;
+        white-space: nowrap;
+        padding: 0.5rem 1.1rem;
+        font-size: 0.8125rem;
+      }
+
       /* Classes Grid & Mobile Non-Overlap Urgency Placement */
       .classes-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+        width: 100%;
+        min-width: 0;
       }
       .class-card {
         border-radius: 14px;
+        width: 100%;
+        min-width: 0;
       }
       .class-media {
-        height: 210px;
+        height: 215px;
+        position: relative;
+        width: 100%;
       }
       .class-tag-overlay {
         top: 0.75rem;
         left: 0.75rem;
         font-size: 0.68rem;
         padding: 0.25rem 0.65rem;
+        z-index: 3;
       }
-      /* Prevent overlap: On mobile, position urgency badge at bottom-left, opposite price pill */
+      .class-price-pill {
+        position: absolute;
+        top: 0.75rem;
+        right: 0.75rem;
+        bottom: auto;
+        font-size: 0.95rem;
+        padding: 0.25rem 0.65rem;
+        z-index: 3;
+      }
+      /* Position urgency badge at bottom-left across the media preview */
       .class-urgency-slot {
         position: absolute;
         top: auto;
         bottom: 0.75rem;
         left: 0.75rem;
-        right: auto;
+        right: 0.75rem;
+        max-width: calc(100% - 1.5rem);
         z-index: 4;
       }
       .class-urgency-indicator {
         font-size: 0.68rem;
-        padding: 0.28rem 0.65rem;
+        padding: 0.25rem 0.6rem;
         gap: 0.35rem;
-      }
-      .class-price-pill {
-        bottom: 0.75rem;
-        right: 0.75rem;
-        font-size: 1rem;
-        padding: 0.25rem 0.65rem;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
       .class-body {
         padding: 1.25rem 1.15rem;
@@ -2956,11 +3258,21 @@
       .passes-showcase {
         padding: 1.35rem 1rem;
         border-radius: 14px;
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+        word-break: break-word;
+      }
+      .passes-showcase a {
+        word-break: break-all;
+        overflow-wrap: anywhere;
       }
       .passes-grid {
         grid-template-columns: 1fr;
         gap: 1.25rem;
         margin-top: 1.5rem;
+        width: 100%;
+        min-width: 0;
       }
       .pass-card {
         padding: 1.4rem 1.15rem;
@@ -3215,6 +3527,70 @@
         font-size: 0.875rem;
         line-height: 1.5;
         margin-bottom: 1.25rem;
+      }
+
+      /* FAQ Section */
+      .faq-header-row {
+        margin-bottom: 1.75rem;
+      }
+      .faq-filter-bar {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .faq-filter-bar::-webkit-scrollbar {
+        display: none;
+      }
+      .faq-filter-btn {
+        flex-shrink: 0;
+        padding: 0.45rem 0.95rem;
+        font-size: 0.75rem;
+      }
+      .faq-summary {
+        padding: 1.15rem 1.15rem;
+        gap: 0.85rem;
+      }
+      .faq-q-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+      }
+      .faq-question {
+        font-size: 1.05rem;
+      }
+      .faq-chevron {
+        width: 32px;
+        height: 32px;
+      }
+      .faq-answer-content {
+        padding: 0 1.15rem 1.25rem;
+        font-size: 0.875rem;
+        line-height: 1.6;
+      }
+      .faq-support-card {
+        padding: 1.35rem 1.15rem;
+        margin-top: 2.5rem;
+        border-radius: 14px;
+      }
+      .faq-support-text h4 {
+        font-size: 1.2rem;
+      }
+      .faq-support-text p {
+        font-size: 0.85rem;
+      }
+      .faq-support-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.65rem;
+      }
+      .faq-support-actions .btn-primary,
+      .faq-support-actions .btn-secondary {
+        width: 100%;
+        justify-content: center;
+        padding: 0.8rem 1.25rem;
       }
 
       /* Final CTA */
@@ -3491,6 +3867,7 @@
         <a href="#people" class="nav-link">Julie & Rafa</a>
         <a href="#bespoke" class="nav-link">Private & Events</a>
         <a href="#locations" class="nav-link">Locations</a>
+        <a href="#faq" class="nav-link">FAQ</a>
       </nav>
 
       <div class="header-actions">
@@ -4623,7 +5000,291 @@
     </div>
   </section>
 
-  <!-- 10. FINAL CINEMATIC CTA -->
+  <!-- 10. FREQUENTLY ASKED QUESTIONS (FAQ) -->
+  <section class="faq-section" id="faq">
+    <div class="container faq-container">
+      <div class="faq-header-row">
+        <div>
+          <span class="editorial-eyebrow eyebrow-coral">Student Directory & Guidance</span>
+          <h2 class="section-title">FREQUENTLY ASKED QUESTIONS.</h2>
+        </div>
+        <p class="section-lead" style="margin: 0; max-width: 480px;">
+          Everything you need to know about studio parking, registration, skill levels, partner rotation, and what to bring before stepping onto the floor.
+        </p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="faq-filter-bar" role="tablist" aria-label="Filter FAQ topics">
+        <button class="faq-filter-btn active" data-faq-filter="all" onclick="filterFaqCategory('all', this)">
+          All Inquiries <span class="faq-count-chip">8</span>
+        </button>
+        <button class="faq-filter-btn" data-faq-filter="parking" onclick="filterFaqCategory('parking', this)">
+          Parking & Transit <span class="faq-count-chip">1</span>
+        </button>
+        <button class="faq-filter-btn" data-faq-filter="registration" onclick="filterFaqCategory('registration', this)">
+          Registration & Passes <span class="faq-count-chip">2</span>
+        </button>
+        <button class="faq-filter-btn" data-faq-filter="levels" onclick="filterFaqCategory('levels', this)">
+          Class Levels & Beginners <span class="faq-count-chip">3</span>
+        </button>
+        <button class="faq-filter-btn" data-faq-filter="attire" onclick="filterFaqCategory('attire', this)">
+          Attire & Footwear <span class="faq-count-chip">1</span>
+        </button>
+        <button class="faq-filter-btn" data-faq-filter="bespoke" onclick="filterFaqCategory('bespoke', this)">
+          Private & Weddings <span class="faq-count-chip">1</span>
+        </button>
+      </div>
+
+      <!-- Accordion Items -->
+      <div class="faq-accordion-list" id="faqAccordionList">
+
+        <!-- FAQ 1: Parking & Transit -->
+        <details class="faq-item" data-faq-category="parking" open>
+          <summary class="faq-summary">
+            <div class="faq-q-left">
+              <span class="faq-category-badge">Parking & Transit</span>
+              <h3 class="faq-question">Where can I park, and how accessible are your studios by TTC transit?</h3>
+            </div>
+            <div class="faq-chevron" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </summary>
+          <div class="faq-answer-content">
+            <p>
+              Both of our primary downtown Toronto studio locations are exceptionally well connected by public transit and have convenient street and municipal Green P parking options:
+            </p>
+            
+            <div class="faq-card-detail-block">
+              <div class="mini-loc-header">
+                <span class="detail-title">📍 509 Bloor St West (The Annex / Downtown)</span>
+                <span class="faq-highlight-pill">TUESDAY & SATURDAY SESSIONS</span>
+              </div>
+              <div class="detail-body">
+                <strong>TTC Subway & Streetcar:</strong> Located less than a 1-minute walk from <strong>Bathurst Subway Station</strong> (Line 2 Bloor-Danforth and the 511 Bathurst streetcar). Simply exit toward Bloor Street West and walk half a block west.<br>
+                <strong>Parking:</strong> Metered Green P street parking along Bloor St W and Bathurst St. Additionally, two municipal Green P surface parking lots are located within 2 minutes: <strong>Carpark 68</strong> (Markham St, south of Bloor) and <strong>Carpark 84</strong> (Lippincott St, north of Lennox).
+              </div>
+            </div>
+
+            <div class="faq-card-detail-block">
+              <div class="mini-loc-header">
+                <span class="detail-title">📍 295 Dufferin St (Parkdale / Liberty Village)</span>
+                <span class="faq-highlight-pill">WEDNESDAY ONLY WOMXN & PRIVATE COACHING</span>
+              </div>
+              <div class="detail-body">
+                <strong>TTC Transit:</strong> Steps from the <strong>504 King Streetcar</strong> (King & Dufferin stop) or the <strong>29 Dufferin Bus</strong>.<br>
+                <strong>Parking:</strong> Visitor parking spaces are available on-site at the complex, alongside plentiful Green P metered street parking along Dufferin St, Melbourne Ave, and King St West.
+              </div>
+            </div>
+
+            <div class="faq-card-detail-block">
+              <div class="mini-loc-header">
+                <span class="detail-title">📍 Redwood Theatre (1300 Gerrard St E)</span>
+                <span class="faq-highlight-pill">COMMUNITY SOCIALS</span>
+              </div>
+              <div class="detail-body">
+                <strong>TTC Transit:</strong> Located directly on the <strong>506 Carlton Streetcar</strong> at Gerrard & Greenwood. Street parking is accessible along Gerrard St E and Greenwood Ave.
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- FAQ 2: Registration & Booking -->
+        <details class="faq-item" data-faq-category="registration">
+          <summary class="faq-summary">
+            <div class="faq-q-left">
+              <span class="faq-category-badge">Registration</span>
+              <h3 class="faq-question">How do I register for a class, and do I need to book in advance?</h3>
+            </div>
+            <div class="faq-chevron" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </summary>
+          <div class="faq-answer-content">
+            <p>
+              We believe dancing should be accessible, flexible, and free of stressful contracts. You have two convenient ways to join us:
+            </p>
+            <ul>
+              <li><strong>Reserve Online in Advance:</strong> You can book your spot directly through this website by clicking any <strong>"Book Class"</strong> or <strong>"Reserve a Spot"</strong> button. Selecting your class opens our quick drawer where your spot is held on the attendance sheet.</li>
+              <li><strong>Door Drop-Ins:</strong> Walk-ins are always welcomed at the door if studio capacity permits. We recommend arriving 15 minutes before the session to sign in.</li>
+              <li><strong>Transparent Pricing:</strong> Single group classes are <strong>$20 per drop-in</strong>. If it is your first month with us, we highly recommend our <strong>Discovery Pass ($52 for 4 classes — only $13/class)</strong>.</li>
+              <li><strong>Accepted Payment Methods:</strong> We accept <strong>Interac e-Transfer</strong> to <a href="mailto:milpasosstudio@gmail.com" style="color: var(--amber); text-decoration: underline;">milpasosstudio@gmail.com</a> (please include your full name and the class name in the transfer message) or <strong>Cash ($20)</strong> at the studio door.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- FAQ 3: Class Levels & First Timers -->
+        <details class="faq-item" data-faq-category="levels">
+          <summary class="faq-summary">
+            <div class="faq-q-left">
+              <span class="faq-category-badge">Class Levels</span>
+              <h3 class="faq-question">I’ve never danced before! What class level should I start with?</h3>
+            </div>
+            <div class="faq-chevron" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </summary>
+          <div class="faq-answer-content">
+            <p>
+              <strong>Absolute beginners are welcomed every single week with open arms!</strong> You do not need any dance background, rhythm experience, or coordination.
+            </p>
+            <p>
+              Our classes are structured with progressive layering so you build genuine body memory without feeling overwhelmed:
+            </p>
+            <ul>
+              <li><strong>Tuesday Cuban Salsa & Timba (7:00 PM – 8:30 PM · 509 Bloor St W):</strong> We spend the first 30 minutes focusing on body isolation, Cuban Son clave musicality, and basic Casino footwork (Guapea, Dile que no). Then, we transition into partner connection and dynamic Rueda de Casino circle dancing. Rafa and Julie provide beginner variations alongside intermediate flourishes.</li>
+              <li><strong>Wednesday Only WomXn Salsa (8:00 PM – 9:00 PM · 295 Dufferin St):</strong> Open to all levels. Focuses on posture, fluid arm stylings, rib cage and hip mobility, and feeling confident in your own skin.</li>
+              <li><strong>Saturday Zumba Fitness (10:30 AM – 11:30 AM · 509 Bloor St W):</strong> Follow-along cardio dance party combining salsa, merengue, reggaeton, and cumbia. Work at your own pace and stamina!</li>
+              <li><strong>Tuesday Kids Afro / Hip Hop (6:00 PM – 7:00 PM · 509 Bloor St W):</strong> For youth ages 6–14 learning authentic cultural grooves, coordination, and musical self-expression.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- FAQ 4: Dance Partner Requirement -->
+        <details class="faq-item" data-faq-category="levels">
+          <summary class="faq-summary">
+            <div class="faq-q-left">
+              <span class="faq-category-badge">Partner Info</span>
+              <h3 class="faq-question">Do I need to bring a dance partner to attend class?</h3>
+            </div>
+            <div class="faq-chevron" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </summary>
+          <div class="faq-answer-content">
+            <p>
+              <strong>No partner is required at all!</strong> Approximately 75% of our students arrive on their own.
+            </p>
+            <p>
+              In traditional Cuban Salsa (Casino) and Rueda de Casino, we rotate dance partners throughout the lesson. Here's why our students love partner rotation:
+            </p>
+            <ul>
+              <li>It accelerates your learning: dancing with different leads and follows develops true physical connection, adaptability, and balance.</li>
+              <li>It builds immediate community: within 15 minutes of rotating in the circle, you'll know everyone in the room by name.</li>
+              <li><strong>Coming with a partner?</strong> If you and your partner attend together and prefer to dance exclusively with each other without rotating, simply mention this to Julie or Rafa when you arrive. We will gladly accommodate you!</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- FAQ 5: Attire & Footwear -->
+        <details class="faq-item" data-faq-category="attire">
+          <summary class="faq-summary">
+            <div class="faq-q-left">
+              <span class="faq-category-badge">Attire & Shoes</span>
+              <h3 class="faq-question">What should I wear, and what shoes are recommended for dance class?</h3>
+            </div>
+            <div class="faq-chevron" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </summary>
+          <div class="faq-answer-content">
+            <p>
+              Comfort and floor mobility are the most important factors when choosing what to wear:
+            </p>
+            <ul>
+              <li><strong>Clothing:</strong> Wear comfortable, breathable casual wear or activewear (t-shirts, athletic tops, leggings, light stretch pants, or casual skirts/dresses that allow full range of motion). You will break a light sweat!</li>
+              <li><strong>Footwear:</strong> Clean, dry indoor shoes with smooth soles. Ideal options include dance sneakers, jazz shoes, ballroom/Latin practice shoes, smooth-soled lifestyle sneakers (like canvas shoes), or dress shoes with smooth leather/suede bottoms that allow you to pivot smoothly without straining your knees.</li>
+              <li><strong>What to Avoid:</strong> Please do not wear outdoor winter boots, wet shoes, flip-flops, or running shoes with deep, gummy rubber treads that stick to the hardwood floor during turns.</li>
+              <li><strong>What to Bring:</strong> A reusable water bottle to stay hydrated, and a small hand towel if you're taking our energetic Cuban Salsa or Zumba classes. Both studios have clean change areas and restrooms.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- FAQ 6: Passes, Expiry & Missed Classes -->
+        <details class="faq-item" data-faq-category="registration">
+          <summary class="faq-summary">
+            <div class="faq-q-left">
+              <span class="faq-category-badge">Pass Policies</span>
+              <h3 class="faq-question">How do class passes work, and what is the expiration policy?</h3>
+            </div>
+            <div class="faq-chevron" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </summary>
+          <div class="faq-answer-content">
+            <p>
+              We design our class passes to fit your real-world schedule:
+            </p>
+            <ul>
+              <li><strong>Discovery Pass ($52):</strong> Includes 3 classes + 1 Free bonus class (4 classes total, working out to $13/class). Valid across all weekly group disciplines (Cuban Salsa, Only WomXn Salsa, and Zumba Fitness).</li>
+              <li><strong>10-Class Studio Pass ($160):</strong> Offers dedicated dancers a $4/class discount ($16/class) with full cross-discipline access.</li>
+              <li><strong>Generous 90-Day Validity:</strong> Passes activate on the date of your first attended class and remain valid for <strong>3 full months (90 days)</strong>. If you travel or get sick, you won't lose your remaining classes.</li>
+              <li><strong>Transferable:</strong> If you are moving away or unable to complete your pass, you are welcome to transfer your remaining credits to a friend or family member with a quick email notice.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- FAQ 7: Private Lessons & Wedding Choreography -->
+        <details class="faq-item" data-faq-category="bespoke">
+          <summary class="faq-summary">
+            <div class="faq-q-left">
+              <span class="faq-category-badge">Private & Events</span>
+              <h3 class="faq-question">Do you offer private 1-on-1 lessons, wedding first dances, or corporate shows?</h3>
+            </div>
+            <div class="faq-chevron" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </summary>
+          <div class="faq-answer-content">
+            <p>
+              Yes! Outside of our group schedule, Julie and Rafa provide bespoke coaching and professional Latin entertainment throughout Toronto and the GTA:
+            </p>
+            <ul>
+              <li><strong>Private Dance Lessons ($80/hr):</strong> One-on-one or couple coaching tailored to your individual goals, styling refinement, leading/following connection, or fast-tracking your salsa foundations. Scheduled flexibly on weekdays and weekends at our Annex or Parkdale studios.</li>
+              <li><strong>Wedding First Dance Choreography:</strong> We create natural, stress-free wedding dance routines tailored to your chosen song—from elegant romantic rumba and bachata to spirited Cuban salsa. Packages typically consist of 3 to 6 sessions.</li>
+              <li><strong>Live Shows & Corporate Entertainment (From $150):</strong> Interactive party animations, live Cuban stage shows, and festival entertainment across Ontario and Quebec. Contact us for custom event quotes.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- FAQ 8: Kids Afro / Hip Hop Program -->
+        <details class="faq-item" data-faq-category="levels">
+          <summary class="faq-summary">
+            <div class="faq-q-left">
+              <span class="faq-category-badge">Kids Program</span>
+              <h3 class="faq-question">What ages are welcome in the Kids Afro / Hip Hop class?</h3>
+            </div>
+            <div class="faq-chevron" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </summary>
+          <div class="faq-answer-content">
+            <p>
+              Our Kids Afro / Hip Hop program runs every <strong>Tuesday from 6:00 PM – 7:00 PM at 509 Bloor St West</strong> and is specially crafted for children and youth aged <strong>6 to 14 years old</strong>.
+            </p>
+            <ul>
+              <li><strong>Focus & Curriculum:</strong> Children learn body awareness, musical rhythm, bounce technique, and positive cultural Afro-urban foundations in a fun, non-competitive environment.</li>
+              <li><strong>Rate:</strong> $20 drop-in or covered under studio multi-class passes.</li>
+              <li><strong>For Parents:</strong> Parents may wait comfortably in the studio reception area or enjoy the cafes and amenities of the vibrant Annex neighborhood right outside the door.</li>
+            </ul>
+          </div>
+        </details>
+
+      </div>
+
+      <!-- Direct Assistance Prompt Card -->
+      <div class="faq-support-card">
+        <div class="faq-support-text">
+          <h4>Have another question before joining?</h4>
+          <p>Julie & Rafa are always happy to help you find the right class, transit route, or private lesson time.</p>
+        </div>
+        <div class="faq-support-actions">
+          <button class="btn-primary" onclick="openBookingDrawer('Cuban Salsa & Timba ($20)')">
+            BOOK A CLASS ($20)
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <a href="tel:+16472864209" class="btn-secondary">
+            CALL (647) 286-4209
+          </a>
+          <a href="mailto:milpasosstudio@gmail.com" class="btn-secondary">
+            EMAIL DIRECTLY
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 11. FINAL CINEMATIC CTA -->
   <section class="final-cta-section" id="cta">
     <div class="cta-backdrop">
       <img src="https://static.wixstatic.com/media/7e68de_580356972b934176a4600bdb61c12200~mv2.jpg" alt="Mil Pasos Studio Room Atmosphere" loading="lazy">
@@ -4694,13 +5355,14 @@
       </div>
 
       <div class="footer-col">
-        <h5>Studios</h5>
+        <h5>Studios & Info</h5>
         <ul>
           <li><a href="#locations">509 Bloor St West (Annex / Downtown)</a></li>
           <li><a href="#locations">295 Dufferin St (Parkdale / Liberty)</a></li>
           <li><a href="#locations">Trinity Bellwoods & Redwood Theatre</a></li>
           <li><a href="#locations">Kitchener-Waterloo (Sundays)</a></li>
           <li><a href="#locations">GTA / Ontario / Quebec</a></li>
+          <li><a href="#faq">Frequently Asked Questions (FAQ)</a></li>
         </ul>
       </div>
 
@@ -4841,58 +5503,34 @@
 
     <ul class="mobile-nav-links">
       <li class="mobile-nav-link-item">
-        <a href="#motion" onclick="closeMobileNav()">
-          <span>In Motion</span>
-          <span class="mobile-nav-badge">REELS</span>
-        </a>
+        <a href="#motion" onclick="closeMobileNav()">In Motion</a>
       </li>
       <li class="mobile-nav-link-item">
-        <a href="#classes" onclick="closeMobileNav()">
-          <span>Class Offerings</span>
-          <span class="mobile-nav-badge">STYLES</span>
-        </a>
+        <a href="#classes" onclick="closeMobileNav()">Class Offerings</a>
       </li>
       <li class="mobile-nav-link-item">
-        <a href="#schedule" onclick="closeMobileNav()">
-          <span>Weekly Timetable</span>
-          <span class="mobile-nav-badge">SCHEDULE</span>
-        </a>
+        <a href="#schedule" onclick="closeMobileNav()">Weekly Timetable</a>
       </li>
       <li class="mobile-nav-link-item">
-        <a href="#passes" onclick="closeMobileNav()">
-          <span>Passes & Pricing</span>
-          <span class="mobile-nav-badge">FROM $13/CLASS</span>
-        </a>
+        <a href="#passes" onclick="closeMobileNav()">Passes & Pricing</a>
       </li>
       <li class="mobile-nav-link-item">
-        <a href="#party" onclick="closeMobileNav()">
-          <span>Community & Socials</span>
-          <span class="mobile-nav-badge">NIGHTLIFE</span>
-        </a>
+        <a href="#party" onclick="closeMobileNav()">Community & Socials</a>
       </li>
       <li class="mobile-nav-link-item">
-        <a href="#voices" onclick="closeMobileNav()">
-          <span>Community Voices</span>
-          <span class="mobile-nav-badge">5.0 ★ REVIEWS</span>
-        </a>
+        <a href="#voices" onclick="closeMobileNav()">Community Voices</a>
       </li>
       <li class="mobile-nav-link-item">
-        <a href="#people" onclick="closeMobileNav()">
-          <span>Julie & Rafa</span>
-          <span class="mobile-nav-badge">DIRECTORS</span>
-        </a>
+        <a href="#people" onclick="closeMobileNav()">Julie & Rafa</a>
       </li>
       <li class="mobile-nav-link-item">
-        <a href="#bespoke" onclick="closeMobileNav()">
-          <span>Private & Weddings</span>
-          <span class="mobile-nav-badge">BESPOKE</span>
-        </a>
+        <a href="#bespoke" onclick="closeMobileNav()">Private & Weddings</a>
       </li>
       <li class="mobile-nav-link-item">
-        <a href="#locations" onclick="closeMobileNav()">
-          <span>Studio Locations</span>
-          <span class="mobile-nav-badge">TORONTO & KW</span>
-        </a>
+        <a href="#locations" onclick="closeMobileNav()">Studio Locations</a>
+      </li>
+      <li class="mobile-nav-link-item">
+        <a href="#faq" onclick="closeMobileNav()">Frequently Asked Questions</a>
       </li>
     </ul>
 
@@ -5025,6 +5663,10 @@
     function filterClasses(category, btnElement) {
       document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
       btnElement.classList.add('active');
+
+      if (btnElement && typeof btnElement.scrollIntoView === 'function') {
+        btnElement.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
 
       const cards = document.querySelectorAll('.class-card');
       let visibleCount = 0;
@@ -5374,6 +6016,25 @@
         const x = e.pageX - voicesTrackWrapper.offsetLeft;
         const walk = (x - voicesStartX) * 1.5;
         voicesTrackWrapper.scrollLeft = voicesScrollLeft - walk;
+      });
+    }
+
+    // 12. FAQ CATEGORY FILTERING
+    function filterFaqCategory(category, buttonElement) {
+      const filterBtns = document.querySelectorAll('.faq-filter-btn');
+      filterBtns.forEach(btn => btn.classList.remove('active'));
+      if (buttonElement) {
+        buttonElement.classList.add('active');
+      }
+
+      const faqItems = document.querySelectorAll('#faqAccordionList .faq-item');
+      faqItems.forEach(item => {
+        const itemCat = item.getAttribute('data-faq-category');
+        if (category === 'all' || itemCat === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
       });
     }
   </script>
